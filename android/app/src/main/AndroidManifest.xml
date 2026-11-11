@@ -36,6 +36,7 @@
           <category android:name="android.intent.category.DEFAULT" />
           <category android:name="android.intent.category.BROWSABLE" />
           <data android:scheme="lxmusic" android:host="*" />
+          <data android:scheme="lxmusiclib" android:host="*" />
         </intent-filter>
         <intent-filter android:priority="80">
           <action android:name="android.intent.action.VIEW" />

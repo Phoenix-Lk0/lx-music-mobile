@@ -6,6 +6,7 @@ import { getIgnoreVersion, getIgnoreVersionFailTipTime, saveIgnoreVersion, saveI
 import { showVersionModal } from '@/navigation'
 import { Navigation } from 'react-native-navigation'
 import { toast } from '@/utils/tools'
+import { LIB_EDITION } from '@/config/sourceLibrary'
 
 export const showModal = () => {
   if (versionState.showModal) return
@@ -20,6 +21,11 @@ export const hideModal = (componentId: string) => {
 }
 
 export const checkUpdate = async() => {
+  // 音源库版与官方包签名不同，官方更新包无法覆盖安装，因此跳过官方更新检查
+  if (LIB_EDITION) {
+    versionActions.setVersionInfo({ status: 'idle', isLatest: true })
+    return
+  }
   versionActions.setVersionInfo({ status: 'checking' })
   let versionInfo: InitState['versionInfo'] = { ...versionState.versionInfo }
   try {

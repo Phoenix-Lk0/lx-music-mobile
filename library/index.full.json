@@ -1,0 +1,3494 @@
+{
+  "schema": 1,
+  "updatedAt": "2026-11-11T15:00:00Z",
+  "notice": "镜像索引，共 317 条，来源 sowahsun/lxmusic- 镜像仓库，未逐条验证，失效请置 dead。",
+  "sources": [
+    {
+      "id": "mirror-000",
+      "name": "Ciallo~",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/Ciallo~.js",
+      "size": 5141,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-001",
+      "name": "HUIBQ音源",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/HUIBQ%E9%9F%B3%E6%BA%90.js",
+      "size": 2727,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-002",
+      "name": "KE-DES",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/KE-DES.js",
+      "size": 5257,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-003",
+      "name": "yibai酷我流式V4",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/yibai%E9%85%B7%E6%88%91%E6%B5%81%E5%BC%8FV4.js",
+      "size": 2012,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-004",
+      "name": "忆音音源 v1",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/%E5%BF%86%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v1.js",
+      "size": 1498,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-005",
+      "name": "惜缘 v1",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/%E6%83%9C%E7%BC%98%2520v1.js",
+      "size": 2274,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-006",
+      "name": "收集の聚合接口",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/%E6%94%B6%E9%9B%86%E3%81%AE%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.js",
+      "size": 2931,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-007",
+      "name": "念心音源 v1.0.0",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E5%BF%B5%E5%BF%83%E9%9F%B3%E6%BA%90%2520v1.0.0.js",
+      "size": 27246,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-008",
+      "name": "洛雪科技[独家音源] v4-会停用",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E6%B4%9B%E9%9B%AA%E7%A7%91%E6%8A%80%255B%E7%8B%AC%E5%AE%B6%E9%9F%B3%E6%BA%90%255D%2520v4-%E4%BC%9A%E5%81%9C%E7%94%A8.js",
+      "size": 114852,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-009",
+      "name": "聚合API",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E8%81%9A%E5%90%88API.js",
+      "size": 1002,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-010",
+      "name": "fish-music音源",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/fish-music%E9%9F%B3%E6%BA%90.js",
+      "size": 10096,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-011",
+      "name": "lx-玉宁熙 v1.1.5 需自行配置",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/lx-%E7%8E%89%E5%AE%81%E7%86%99%2520v1.1.5%2520%E9%9C%80%E8%87%AA%E8%A1%8C%E9%85%8D%E7%BD%AE.js",
+      "size": 60797,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-012",
+      "name": "星海音乐源 v2.2.8",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E6%98%9F%E6%B5%B7%E9%9F%B3%E4%B9%90%E6%BA%90%2520v2.2.8.js",
+      "size": 13802,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-013",
+      "name": "洛雪音乐源 1.0.0 v2-fix",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E6%B4%9B%E9%9B%AA%E9%9F%B3%E4%B9%90%E6%BA%90%25201.0.0%2520v2-fix.js",
+      "size": 28852,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-014",
+      "name": "溯音音源 v1",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E6%BA%AF%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v1.js",
+      "size": 17656,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-015",
+      "name": "统一音乐源",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E7%BB%9F%E4%B8%80%E9%9F%B3%E4%B9%90%E6%BA%90.js",
+      "size": 9245,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-016",
+      "name": "长青SVIP音源",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E9%95%BF%E9%9D%92SVIP%E9%9F%B3%E6%BA%90.js",
+      "size": 30739,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-017",
+      "name": "FreeListen-需自备网易云VIP密钥",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E8%BE%83%E5%B7%AE-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0320k%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0128k/FreeListen-%E9%9C%80%E8%87%AA%E5%A4%87%E7%BD%91%E6%98%93%E4%BA%91VIP%E5%AF%86%E9%92%A5.js",
+      "size": 18176,
+      "tags": [
+        "较差-支持单平台320k或多平台128k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-018",
+      "name": "春日影-单平台128k",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E8%BE%83%E5%B7%AE-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0320k%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0128k/%E6%98%A5%E6%97%A5%E5%BD%B1-%E5%8D%95%E5%B9%B3%E5%8F%B0128k.js",
+      "size": 1750,
+      "tags": [
+        "较差-支持单平台320k或多平台128k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-019",
+      "name": "野花音源",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E8%BE%83%E5%B7%AE-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0320k%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0128k/%E9%87%8E%E8%8A%B1%E9%9F%B3%E6%BA%90%2520.js",
+      "size": 10057,
+      "tags": [
+        "较差-支持单平台320k或多平台128k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-020",
+      "name": "野草音源",
+      "version": "V2603",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603/%E8%BE%83%E5%B7%AE-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0320k%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0128k/%E9%87%8E%E8%8D%89%E9%9F%B3%E6%BA%90.js",
+      "size": 9176,
+      "tags": [
+        "较差-支持单平台320k或多平台128k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-021",
+      "name": "HUIBQ音源",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/HUIBQ%E9%9F%B3%E6%BA%90.js",
+      "size": 2727,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-022",
+      "name": "忆音音源 v1",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/%E5%BF%86%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v1.js",
+      "size": 1498,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-023",
+      "name": "星海音乐源 v2.2.8",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/%E6%98%9F%E6%B5%B7%E9%9F%B3%E4%B9%90%E6%BA%90%2520v2.2.8.js",
+      "size": 13802,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-024",
+      "name": "统一音乐源",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/%E7%BB%9F%E4%B8%80%E9%9F%B3%E4%B9%90%E6%BA%90.js",
+      "size": 9245,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-025",
+      "name": "全豆要-聚合音源 v3.0.0 TSS解密版",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E5%85%A8%E8%B1%86%E8%A6%81%2528%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2529/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2520v3.0.0%2520TSS%E8%A7%A3%E5%AF%86%E7%89%88.js",
+      "size": 32340,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-026",
+      "name": "全豆要-聚合音源 v3.0.0",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E5%85%A8%E8%B1%86%E8%A6%81%2528%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2529/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2520v3.0.0.js",
+      "size": 104693,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-027",
+      "name": "全豆要-聚合音源 v4.0 TSS解密版",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E5%85%A8%E8%B1%86%E8%A6%81%2528%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2529/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2520v4.0%2520TSS%E8%A7%A3%E5%AF%86%E7%89%88.js",
+      "size": 32478,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-028",
+      "name": "全豆要-聚合音源 v4.0",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E5%85%A8%E8%B1%86%E8%A6%81%2528%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2529/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2520v4.0.js",
+      "size": 99134,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-029",
+      "name": "全豆要-聚合音源 v4.1 TSS解密版 修复部分问题",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E5%85%A8%E8%B1%86%E8%A6%81%2528%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2529/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2520v4.1%2520TSS%E8%A7%A3%E5%AF%86%E7%89%88%2520%E4%BF%AE%E5%A4%8D%E9%83%A8%E5%88%86%E9%97%AE%E9%A2%98.js",
+      "size": 32392,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-030",
+      "name": "全豆要-聚合音源 v5.0",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E5%85%A8%E8%B1%86%E8%A6%81%2528%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2529/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2520v5.0.js",
+      "size": 32392,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-031",
+      "name": "全豆要-聚合音源 v5.1",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E5%85%A8%E8%B1%86%E8%A6%81%2528%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2529/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2520v5.1.js",
+      "size": 32392,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-032",
+      "name": "全豆要-聚合音源 v9.1 91特供版",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E5%85%A8%E8%B1%86%E8%A6%81%2528%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2529/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2520v9.1%252091%E7%89%B9%E4%BE%9B%E7%89%88.js",
+      "size": 32346,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-033",
+      "name": "全豆要-聚合音源 v9.2 92特供版 DeepSeek优化",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E5%85%A8%E8%B1%86%E8%A6%81%2528%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2529/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2520v9.2%252092%E7%89%B9%E4%BE%9B%E7%89%88%2520DeepSeek%E4%BC%98%E5%8C%96.js",
+      "size": 32377,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-034",
+      "name": "全豆要-聚合音源 v9.3 93特供版",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E5%85%A8%E8%B1%86%E8%A6%81%2528%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2529/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2520v9.3%252093%E7%89%B9%E4%BE%9B%E7%89%88.js",
+      "size": 31037,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-035",
+      "name": "念心音源 v1.0.0",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E5%BF%B5%E5%BF%83%E9%9F%B3%E6%BA%90%2520v1.0.0.js",
+      "size": 27246,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-036",
+      "name": "洛雪科技[独家音源] v4-会停用",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E6%B4%9B%E9%9B%AA%E7%A7%91%E6%8A%80%255B%E7%8B%AC%E5%AE%B6%E9%9F%B3%E6%BA%90%255D%2520v4-%E4%BC%9A%E5%81%9C%E7%94%A8.js",
+      "size": 114852,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-037",
+      "name": "洛雪音乐源 1.0.0 v2-fix",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E6%B4%9B%E9%9B%AA%E9%9F%B3%E4%B9%90%E6%BA%90%25201.0.0%2520v2-fix.js",
+      "size": 28852,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-038",
+      "name": "聚合API",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E8%81%9A%E5%90%88API.js",
+      "size": 1002,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-039",
+      "name": "长青SVIP音源",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E9%95%BF%E9%9D%92SVIP%E9%9F%B3%E6%BA%90.js",
+      "size": 30739,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-040",
+      "name": "fish-music音源",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/fish-music%E9%9F%B3%E6%BA%90.js",
+      "size": 10096,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-041",
+      "name": "lx-玉宁熙 v1.1.5 需自行配置",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/lx-%E7%8E%89%E5%AE%81%E7%86%99%2520v1.1.5%2520%E9%9C%80%E8%87%AA%E8%A1%8C%E9%85%8D%E7%BD%AE.js",
+      "size": 60797,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-042",
+      "name": "收集の聚合接口",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E6%94%B6%E9%9B%86%E3%81%AE%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.js",
+      "size": 2931,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-043",
+      "name": "溯音音源 v1",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E6%BA%AF%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v1.js",
+      "size": 17656,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-044",
+      "name": "春日影-单平台128k",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E8%BE%83%E5%B7%AE-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0320k%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0128k/%E6%98%A5%E6%97%A5%E5%BD%B1-%E5%8D%95%E5%B9%B3%E5%8F%B0128k.js",
+      "size": 1750,
+      "tags": [
+        "较差-支持单平台320k或多平台128k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-045",
+      "name": "野花音源",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E8%BE%83%E5%B7%AE-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0320k%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0128k/%E9%87%8E%E8%8A%B1%E9%9F%B3%E6%BA%90%2520.js",
+      "size": 10057,
+      "tags": [
+        "较差-支持单平台320k或多平台128k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-046",
+      "name": "野草音源",
+      "version": "V2603_latest",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_latest/%E8%BE%83%E5%B7%AE-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0320k%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0128k/%E9%87%8E%E8%8D%89%E9%9F%B3%E6%BA%90.js",
+      "size": 9176,
+      "tags": [
+        "较差-支持单平台320k或多平台128k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-047",
+      "name": "Ciallo~",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/Ciallo~.js",
+      "size": 5141,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-048",
+      "name": "HUIBQ音源",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/HUIBQ%E9%9F%B3%E6%BA%90.js",
+      "size": 2727,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-049",
+      "name": "KE-DES",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/KE-DES.js",
+      "size": 5257,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-050",
+      "name": "yibai酷我流式V4",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/yibai%E9%85%B7%E6%88%91%E6%B5%81%E5%BC%8FV4.js",
+      "size": 2012,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-051",
+      "name": "忆音音源 v1",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/%E5%BF%86%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v1.js",
+      "size": 1498,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-052",
+      "name": "惜缘 v1",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/%E6%83%9C%E7%BC%98%2520v1.js",
+      "size": 2274,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-053",
+      "name": "收集の聚合接口",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/%E6%94%B6%E9%9B%86%E3%81%AE%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.js",
+      "size": 2931,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-054",
+      "name": "全豆要-聚合音源 v4.1 TSS解密版,兼容性处理，",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2520v4.1%2520TSS%E8%A7%A3%E5%AF%86%E7%89%88,%E5%85%BC%E5%AE%B9%E6%80%A7%E5%A4%84%E7%90%86%EF%BC%8C.js",
+      "size": 32392,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-055",
+      "name": "念心音源 v1.0.0",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E5%BF%B5%E5%BF%83%E9%9F%B3%E6%BA%90%2520v1.0.0.js",
+      "size": 27246,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-056",
+      "name": "洛雪科技[独家音源] v4-会停用",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E6%B4%9B%E9%9B%AA%E7%A7%91%E6%8A%80%255B%E7%8B%AC%E5%AE%B6%E9%9F%B3%E6%BA%90%255D%2520v4-%E4%BC%9A%E5%81%9C%E7%94%A8.js",
+      "size": 114852,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-057",
+      "name": "聚合API",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E8%81%9A%E5%90%88API.js",
+      "size": 1002,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-058",
+      "name": "fish-music音源",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/fish-music%E9%9F%B3%E6%BA%90.js",
+      "size": 10096,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-059",
+      "name": "lx-玉宁熙 v1.1.5 需自行配置",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/lx-%E7%8E%89%E5%AE%81%E7%86%99%2520v1.1.5%2520%E9%9C%80%E8%87%AA%E8%A1%8C%E9%85%8D%E7%BD%AE.js",
+      "size": 60797,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-060",
+      "name": "星海音乐源 v2.2.8",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E6%98%9F%E6%B5%B7%E9%9F%B3%E4%B9%90%E6%BA%90%2520v2.2.8.js",
+      "size": 13802,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-061",
+      "name": "洛雪音乐源 1.0.0 v2-fix",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E6%B4%9B%E9%9B%AA%E9%9F%B3%E4%B9%90%E6%BA%90%25201.0.0%2520v2-fix.js",
+      "size": 28852,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-062",
+      "name": "溯音音源 v1",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E6%BA%AF%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v1.js",
+      "size": 17656,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-063",
+      "name": "统一音乐源",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E7%BB%9F%E4%B8%80%E9%9F%B3%E4%B9%90%E6%BA%90.js",
+      "size": 9245,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-064",
+      "name": "长青SVIP音源",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E9%95%BF%E9%9D%92SVIP%E9%9F%B3%E6%BA%90.js",
+      "size": 30739,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-065",
+      "name": "FreeListen-需自备网易云VIP密钥",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E8%BE%83%E5%B7%AE-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0320k%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0128k/FreeListen-%E9%9C%80%E8%87%AA%E5%A4%87%E7%BD%91%E6%98%93%E4%BA%91VIP%E5%AF%86%E9%92%A5.js",
+      "size": 18176,
+      "tags": [
+        "较差-支持单平台320k或多平台128k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-066",
+      "name": "春日影-单平台128k",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E8%BE%83%E5%B7%AE-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0320k%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0128k/%E6%98%A5%E6%97%A5%E5%BD%B1-%E5%8D%95%E5%B9%B3%E5%8F%B0128k.js",
+      "size": 1750,
+      "tags": [
+        "较差-支持单平台320k或多平台128k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-067",
+      "name": "野花音源",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E8%BE%83%E5%B7%AE-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0320k%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0128k/%E9%87%8E%E8%8A%B1%E9%9F%B3%E6%BA%90%2520.js",
+      "size": 10057,
+      "tags": [
+        "较差-支持单平台320k或多平台128k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-068",
+      "name": "野草音源",
+      "version": "V2603_miniupdate",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_miniupdate/%E8%BE%83%E5%B7%AE-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0320k%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0128k/%E9%87%8E%E8%8D%89%E9%9F%B3%E6%BA%90.js",
+      "size": 9176,
+      "tags": [
+        "较差-支持单平台320k或多平台128k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-069",
+      "name": "HUIBQ音源",
+      "version": "V2603_organized",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_organized/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/HUIBQ%E9%9F%B3%E6%BA%90.js",
+      "size": 2727,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-070",
+      "name": "忆音音源 v1",
+      "version": "V2603_organized",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_organized/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/%E5%BF%86%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v1.js",
+      "size": 1498,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-071",
+      "name": "星海音乐源 v2.2.8",
+      "version": "V2603_organized",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_organized/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/%E6%98%9F%E6%B5%B7%E9%9F%B3%E4%B9%90%E6%BA%90%2520v2.2.8.js",
+      "size": 13802,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-072",
+      "name": "统一音乐源",
+      "version": "V2603_organized",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_organized/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/%E7%BB%9F%E4%B8%80%E9%9F%B3%E4%B9%90%E6%BA%90.js",
+      "size": 9245,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-073",
+      "name": "全豆要-聚合音源 v4.1 TSS解密版,兼容性处理，",
+      "version": "V2603_organized",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_organized/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2520v4.1%2520TSS%E8%A7%A3%E5%AF%86%E7%89%88,%E5%85%BC%E5%AE%B9%E6%80%A7%E5%A4%84%E7%90%86%EF%BC%8C.js",
+      "size": 32392,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-074",
+      "name": "念心音源 v1.0.0",
+      "version": "V2603_organized",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_organized/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E5%BF%B5%E5%BF%83%E9%9F%B3%E6%BA%90%2520v1.0.0.js",
+      "size": 27246,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-075",
+      "name": "洛雪科技[独家音源] v4-会停用",
+      "version": "V2603_organized",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_organized/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E6%B4%9B%E9%9B%AA%E7%A7%91%E6%8A%80%255B%E7%8B%AC%E5%AE%B6%E9%9F%B3%E6%BA%90%255D%2520v4-%E4%BC%9A%E5%81%9C%E7%94%A8.js",
+      "size": 114852,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-076",
+      "name": "洛雪音乐源 1.0.0 v2-fix",
+      "version": "V2603_organized",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_organized/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E6%B4%9B%E9%9B%AA%E9%9F%B3%E4%B9%90%E6%BA%90%25201.0.0%2520v2-fix.js",
+      "size": 28852,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-077",
+      "name": "聚合API",
+      "version": "V2603_organized",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_organized/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E8%81%9A%E5%90%88API.js",
+      "size": 1002,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-078",
+      "name": "长青SVIP音源",
+      "version": "V2603_organized",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_organized/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E9%95%BF%E9%9D%92SVIP%E9%9F%B3%E6%BA%90.js",
+      "size": 30739,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-079",
+      "name": "fish-music音源",
+      "version": "V2603_organized",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_organized/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/fish-music%E9%9F%B3%E6%BA%90.js",
+      "size": 10096,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-080",
+      "name": "lx-玉宁熙 v1.1.5 需自行配置",
+      "version": "V2603_organized",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_organized/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/lx-%E7%8E%89%E5%AE%81%E7%86%99%2520v1.1.5%2520%E9%9C%80%E8%87%AA%E8%A1%8C%E9%85%8D%E7%BD%AE.js",
+      "size": 60797,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-081",
+      "name": "收集の聚合接口",
+      "version": "V2603_organized",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_organized/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E6%94%B6%E9%9B%86%E3%81%AE%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.js",
+      "size": 2931,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-082",
+      "name": "溯音音源 v1",
+      "version": "V2603_organized",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_organized/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E6%BA%AF%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v1.js",
+      "size": 17656,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-083",
+      "name": "春日影-单平台128k",
+      "version": "V2603_organized",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_organized/%E8%BE%83%E5%B7%AE-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0320k%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0128k/%E6%98%A5%E6%97%A5%E5%BD%B1-%E5%8D%95%E5%B9%B3%E5%8F%B0128k.js",
+      "size": 1750,
+      "tags": [
+        "较差-支持单平台320k或多平台128k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-084",
+      "name": "野花音源",
+      "version": "V2603_organized",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_organized/%E8%BE%83%E5%B7%AE-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0320k%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0128k/%E9%87%8E%E8%8A%B1%E9%9F%B3%E6%BA%90%2520.js",
+      "size": 10057,
+      "tags": [
+        "较差-支持单平台320k或多平台128k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-085",
+      "name": "野草音源",
+      "version": "V2603_organized",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V2603_organized/%E8%BE%83%E5%B7%AE-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0320k%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0128k/%E9%87%8E%E8%8D%89%E9%9F%B3%E6%BA%90.js",
+      "size": 9176,
+      "tags": [
+        "较差-支持单平台320k或多平台128k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-086",
+      "name": "全豆要-聚合音源-V4.1",
+      "version": "V260418",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260418/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90-V4.1.js",
+      "size": 32392,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-087",
+      "name": "念心音源-V1.0.1",
+      "version": "V260418",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260418/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E5%BF%B5%E5%BF%83%E9%9F%B3%E6%BA%90-V1.0.1.js",
+      "size": 27119,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-088",
+      "name": "长青SVIP音源-V1.1.1",
+      "version": "V260418",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260418/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E9%95%BF%E9%9D%92SVIP%E9%9F%B3%E6%BA%90-V1.1.1.js",
+      "size": 30739,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-089",
+      "name": "HUIBQ音源",
+      "version": "V260418",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260418/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/HUIBQ%E9%9F%B3%E6%BA%90.js",
+      "size": 2727,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-090",
+      "name": "fish-music音源",
+      "version": "V260418",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260418/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/fish-music%E9%9F%B3%E6%BA%90.js",
+      "size": 10096,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-091",
+      "name": "lx-玉宁熙 v1.1.5 需自行配置",
+      "version": "V260418",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260418/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/lx-%E7%8E%89%E5%AE%81%E7%86%99%2520v1.1.5%2520%E9%9C%80%E8%87%AA%E8%A1%8C%E9%85%8D%E7%BD%AE.js",
+      "size": 60797,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-092",
+      "name": "xinghai-music-source2.3.0",
+      "version": "V260418",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260418/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/xinghai-music-source2.3.0.js",
+      "size": 22914,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-093",
+      "name": "收集の聚合接口",
+      "version": "V260418",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260418/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/%E6%94%B6%E9%9B%86%E3%81%AE%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.js",
+      "size": 2931,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-094",
+      "name": "溯音音源 v1",
+      "version": "V260418",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260418/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/%E6%BA%AF%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v1.js",
+      "size": 17656,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-095",
+      "name": "聚合API",
+      "version": "V260418",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260418/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/%E8%81%9A%E5%90%88API.js",
+      "size": 1002,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-096",
+      "name": "忆音音源 v1",
+      "version": "V260418",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260418/%E7%AC%AC%E4%BA%8C%E6%89%B9%E6%AC%A1/%E5%BF%86%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v1.js",
+      "size": 1498,
+      "tags": [
+        "第二批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-097",
+      "name": "统一音乐源",
+      "version": "V260418",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260418/%E7%AC%AC%E4%BA%8C%E6%89%B9%E6%AC%A1/%E7%BB%9F%E4%B8%80%E9%9F%B3%E4%B9%90%E6%BA%90.js",
+      "size": 9245,
+      "tags": [
+        "第二批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-098",
+      "name": "HUIBQ音源",
+      "version": "V260504",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260504/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/HUIBQ%E9%9F%B3%E6%BA%90.js",
+      "size": 2727,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-099",
+      "name": "全豆要-聚合音源 v9.7 97特供版 DeepSeek优化并修复版本",
+      "version": "V260504",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260504/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2520v9.7%252097%E7%89%B9%E4%BE%9B%E7%89%88%2520DeepSeek%E4%BC%98%E5%8C%96%E5%B9%B6%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC.js",
+      "size": 30371,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-100",
+      "name": "全豆要-聚合音源-V4.1",
+      "version": "V260504",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260504/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90-V4.1.js",
+      "size": 32392,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-101",
+      "name": "忆音音源 v1",
+      "version": "V260504",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260504/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E5%BF%86%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v1.js",
+      "size": 1498,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-102",
+      "name": "念心音源-V1.0.1",
+      "version": "V260504",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260504/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E5%BF%B5%E5%BF%83%E9%9F%B3%E6%BA%90-V1.0.1.js",
+      "size": 27119,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-103",
+      "name": "洛雪科技[独家音源] v4-会停用",
+      "version": "V260504",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260504/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E6%B4%9B%E9%9B%AA%E7%A7%91%E6%8A%80%255B%E7%8B%AC%E5%AE%B6%E9%9F%B3%E6%BA%90%255D%2520v4-%E4%BC%9A%E5%81%9C%E7%94%A8.js",
+      "size": 114852,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-104",
+      "name": "野花音源",
+      "version": "V260504",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260504/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E9%87%8E%E8%8A%B1%E9%9F%B3%E6%BA%90%2520.js",
+      "size": 10057,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-105",
+      "name": "野草音源",
+      "version": "V260504",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260504/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E9%87%8E%E8%8D%89%E9%9F%B3%E6%BA%90.js",
+      "size": 9176,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-106",
+      "name": "长青SVIP音源-V1.1.1",
+      "version": "V260504",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260504/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E9%95%BF%E9%9D%92SVIP%E9%9F%B3%E6%BA%90-V1.1.1.js",
+      "size": 30739,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-107",
+      "name": "音乐下载器 v6",
+      "version": "V260504",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260504/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E9%9F%B3%E4%B9%90%E4%B8%8B%E8%BD%BD%E5%99%A8%2520v6.js",
+      "size": 1822744,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-108",
+      "name": "fish-music音源",
+      "version": "V260504",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260504/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/fish-music%E9%9F%B3%E6%BA%90.js",
+      "size": 10096,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-109",
+      "name": "xinghai-music-source2.3.0",
+      "version": "V260504",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260504/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/xinghai-music-source2.3.0.js",
+      "size": 22914,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-110",
+      "name": "统一音乐源",
+      "version": "V260504",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260504/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/%E7%BB%9F%E4%B8%80%E9%9F%B3%E4%B9%90%E6%BA%90.js",
+      "size": 9245,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-111",
+      "name": "HYWmusic_beta_v0.21.7456 - 2026-05-03T081429.145",
+      "version": "V260504",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260504/%E7%AC%AC%E4%BA%8C%E6%89%B9%E6%AC%A1/HYWmusic_beta_v0.21.7456%2520-%25202026-05-03T081429.145.js",
+      "size": 6231,
+      "tags": [
+        "第二批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-112",
+      "name": "lx-玉宁熙 【kg-flac24 ; kw-flac24 ; wy-master ; tx-master ; mg-failed】",
+      "version": "V260504",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260504/%E7%AC%AC%E4%BA%8C%E6%89%B9%E6%AC%A1/lx-%E7%8E%89%E5%AE%81%E7%86%99%2520%E3%80%90kg-flac24%2520;%2520kw-flac24%2520;%2520wy-master%2520;%2520tx-master%2520;%2520mg-failed%E3%80%91.js",
+      "size": 65072,
+      "tags": [
+        "第二批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-113",
+      "name": "收集の聚合接口",
+      "version": "V260504",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260504/%E7%AC%AC%E4%BA%8C%E6%89%B9%E6%AC%A1/%E6%94%B6%E9%9B%86%E3%81%AE%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.js",
+      "size": 2931,
+      "tags": [
+        "第二批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-114",
+      "name": "溯音音源 v1",
+      "version": "V260504",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260504/%E7%AC%AC%E4%BA%8C%E6%89%B9%E6%AC%A1/%E6%BA%AF%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v1.js",
+      "size": 17656,
+      "tags": [
+        "第二批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-115",
+      "name": "聚合API",
+      "version": "V260504",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260504/%E7%AC%AC%E4%BA%8C%E6%89%B9%E6%AC%A1/%E8%81%9A%E5%90%88API.js",
+      "size": 1002,
+      "tags": [
+        "第二批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-116",
+      "name": "非常刀260424【kw-flac ; wy-320k最高flac24但是不稳定 ;  mg-320k】",
+      "version": "V260504",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260504/%E7%AC%AC%E4%BA%8C%E6%89%B9%E6%AC%A1/%E9%9D%9E%E5%B8%B8%E5%88%80260424%E3%80%90kw-flac%2520;%2520wy-320k%E6%9C%80%E9%AB%98flac24%E4%BD%86%E6%98%AF%E4%B8%8D%E7%A8%B3%E5%AE%9A%2520;%2520%2520mg-320k%E3%80%91.js",
+      "size": 15310,
+      "tags": [
+        "第二批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-117",
+      "name": "HUIBQ音源",
+      "version": "V260620",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260620/%E5%85%B6%E4%BB%96/HUIBQ%E9%9F%B3%E6%BA%90.js",
+      "size": 2727,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-118",
+      "name": "fish-music音源",
+      "version": "V260620",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260620/%E5%85%B6%E4%BB%96/fish-music%E9%9F%B3%E6%BA%90.js",
+      "size": 10096,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-119",
+      "name": "lx-玉宁熙-Pro",
+      "version": "V260620",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260620/%E5%85%B6%E4%BB%96/lx-%E7%8E%89%E5%AE%81%E7%86%99-Pro.js",
+      "size": 68879,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-120",
+      "name": "忆音音源_v1",
+      "version": "V260620",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260620/%E5%85%B6%E4%BB%96/%E5%BF%86%E9%9F%B3%E9%9F%B3%E6%BA%90_v1.js",
+      "size": 1498,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-121",
+      "name": "收集の聚合接口",
+      "version": "V260620",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260620/%E5%85%B6%E4%BB%96/%E6%94%B6%E9%9B%86%E3%81%AE%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.js",
+      "size": 2931,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-122",
+      "name": "星海音源V2.3.5",
+      "version": "V260620",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260620/%E5%85%B6%E4%BB%96/%E6%98%9F%E6%B5%B7%E9%9F%B3%E6%BA%90V2.3.5.js",
+      "size": 34811,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-123",
+      "name": "溯音音源_v1",
+      "version": "V260620",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260620/%E5%85%B6%E4%BB%96/%E6%BA%AF%E9%9F%B3%E9%9F%B3%E6%BA%90_v1.js",
+      "size": 17656,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-124",
+      "name": "统一音乐源",
+      "version": "V260620",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260620/%E5%85%B6%E4%BB%96/%E7%BB%9F%E4%B8%80%E9%9F%B3%E4%B9%90%E6%BA%90.js",
+      "size": 9245,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-125",
+      "name": "聚合API",
+      "version": "V260620",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260620/%E5%85%B6%E4%BB%96/%E8%81%9A%E5%90%88API.js",
+      "size": 1002,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-126",
+      "name": "西瓜聚合",
+      "version": "V260620",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260620/%E5%85%B6%E4%BB%96/%E8%A5%BF%E7%93%9C%E8%81%9A%E5%90%88.js",
+      "size": 42834,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-127",
+      "name": "野花音源_",
+      "version": "V260620",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260620/%E5%85%B6%E4%BB%96/%E9%87%8E%E8%8A%B1%E9%9F%B3%E6%BA%90_.js",
+      "size": 10057,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-128",
+      "name": "野草音源",
+      "version": "V260620",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260620/%E5%85%B6%E4%BB%96/%E9%87%8E%E8%8D%89%E9%9F%B3%E6%BA%90.js",
+      "size": 9176,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-129",
+      "name": "非常刀260424【kw-flac_;_wy-320k最高flac24但是不稳定_;__mg-320k】",
+      "version": "V260620",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260620/%E5%85%B6%E4%BB%96/%E9%9D%9E%E5%B8%B8%E5%88%80260424%E3%80%90kw-flac_;_wy-320k%E6%9C%80%E9%AB%98flac24%E4%BD%86%E6%98%AF%E4%B8%8D%E7%A8%B3%E5%AE%9A_;__mg-320k%E3%80%91.js",
+      "size": 15310,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-130",
+      "name": "【推荐】长青SVIP音源v1.2.0（全平台支持无损）",
+      "version": "V260620",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260620/%E6%8E%A8%E8%8D%90/%E3%80%90%E6%8E%A8%E8%8D%90%E3%80%91%E9%95%BF%E9%9D%92SVIP%E9%9F%B3%E6%BA%90v1.2.0%EF%BC%88%E5%85%A8%E5%B9%B3%E5%8F%B0%E6%94%AF%E6%8C%81%E6%97%A0%E6%8D%9F%EF%BC%89.js",
+      "size": 24532,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-131",
+      "name": "全豆要-聚合音源-V4.1",
+      "version": "V260620",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260620/%E6%8E%A8%E8%8D%90/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90-V4.1.js",
+      "size": 32392,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-132",
+      "name": "全豆要-聚合音源_v9.7_97特供版_DeepSeek优化并修复版本",
+      "version": "V260620",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260620/%E6%8E%A8%E8%8D%90/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90_v9.7_97%E7%89%B9%E4%BE%9B%E7%89%88_DeepSeek%E4%BC%98%E5%8C%96%E5%B9%B6%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC.js",
+      "size": 30371,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-133",
+      "name": "念心音源-V1.0.1",
+      "version": "V260620",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260620/%E6%8E%A8%E8%8D%90/%E5%BF%B5%E5%BF%83%E9%9F%B3%E6%BA%90-V1.0.1.js",
+      "size": 27119,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-134",
+      "name": "洛雪科技[独家音源]_v4-会停用",
+      "version": "V260620",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260620/%E6%8E%A8%E8%8D%90/%E6%B4%9B%E9%9B%AA%E7%A7%91%E6%8A%80%255B%E7%8B%AC%E5%AE%B6%E9%9F%B3%E6%BA%90%255D_v4-%E4%BC%9A%E5%81%9C%E7%94%A8.js",
+      "size": 114852,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-135",
+      "name": "音乐下载器_v6",
+      "version": "V260620",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260620/%E6%8E%A8%E8%8D%90/%E9%9F%B3%E4%B9%90%E4%B8%8B%E8%BD%BD%E5%99%A8_v6.js",
+      "size": 1822744,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-136",
+      "name": "HUIBQ音源",
+      "version": "V260714",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260714/%E5%85%B6%E4%BB%96/HUIBQ%E9%9F%B3%E6%BA%90.js",
+      "size": 2727,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-137",
+      "name": "fish-music音源",
+      "version": "V260714",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260714/%E5%85%B6%E4%BB%96/fish-music%E9%9F%B3%E6%BA%90.js",
+      "size": 10096,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-138",
+      "name": "lx-玉宁熙-Pro",
+      "version": "V260714",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260714/%E5%85%B6%E4%BB%96/lx-%E7%8E%89%E5%AE%81%E7%86%99-Pro.js",
+      "size": 68879,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-139",
+      "name": "忆音音源_v1",
+      "version": "V260714",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260714/%E5%85%B6%E4%BB%96/%E5%BF%86%E9%9F%B3%E9%9F%B3%E6%BA%90_v1.js",
+      "size": 1498,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-140",
+      "name": "收集の聚合接口",
+      "version": "V260714",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260714/%E5%85%B6%E4%BB%96/%E6%94%B6%E9%9B%86%E3%81%AE%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.js",
+      "size": 2931,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-141",
+      "name": "溯音音源_v1",
+      "version": "V260714",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260714/%E5%85%B6%E4%BB%96/%E6%BA%AF%E9%9F%B3%E9%9F%B3%E6%BA%90_v1.js",
+      "size": 17656,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-142",
+      "name": "统一音乐源",
+      "version": "V260714",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260714/%E5%85%B6%E4%BB%96/%E7%BB%9F%E4%B8%80%E9%9F%B3%E4%B9%90%E6%BA%90.js",
+      "size": 9245,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-143",
+      "name": "聚合API",
+      "version": "V260714",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260714/%E5%85%B6%E4%BB%96/%E8%81%9A%E5%90%88API.js",
+      "size": 1002,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-144",
+      "name": "西瓜聚合",
+      "version": "V260714",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260714/%E5%85%B6%E4%BB%96/%E8%A5%BF%E7%93%9C%E8%81%9A%E5%90%88.js",
+      "size": 42834,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-145",
+      "name": "野花音源_",
+      "version": "V260714",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260714/%E5%85%B6%E4%BB%96/%E9%87%8E%E8%8A%B1%E9%9F%B3%E6%BA%90_.js",
+      "size": 10057,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-146",
+      "name": "野草音源",
+      "version": "V260714",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260714/%E5%85%B6%E4%BB%96/%E9%87%8E%E8%8D%89%E9%9F%B3%E6%BA%90.js",
+      "size": 9176,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-147",
+      "name": "非常刀260424【kw-flac_;_wy-320k最高flac24但是不稳定_;__mg-320k】",
+      "version": "V260714",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260714/%E5%85%B6%E4%BB%96/%E9%9D%9E%E5%B8%B8%E5%88%80260424%E3%80%90kw-flac_;_wy-320k%E6%9C%80%E9%AB%98flac24%E4%BD%86%E6%98%AF%E4%B8%8D%E7%A8%B3%E5%AE%9A_;__mg-320k%E3%80%91.js",
+      "size": 15310,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-148",
+      "name": "xinghai-music-sourcev2.3.7",
+      "version": "V260714",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260714/%E6%8E%A8%E8%8D%90/xinghai-music-sourcev2.3.7.js",
+      "size": 13130,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-149",
+      "name": "【推荐】长青SVIP音源v1.2.0（全平台支持无损）",
+      "version": "V260714",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260714/%E6%8E%A8%E8%8D%90/%E3%80%90%E6%8E%A8%E8%8D%90%E3%80%91%E9%95%BF%E9%9D%92SVIP%E9%9F%B3%E6%BA%90v1.2.0%EF%BC%88%E5%85%A8%E5%B9%B3%E5%8F%B0%E6%94%AF%E6%8C%81%E6%97%A0%E6%8D%9F%EF%BC%89.js",
+      "size": 24532,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-150",
+      "name": "全豆要-聚合音源-V4.1",
+      "version": "V260714",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260714/%E6%8E%A8%E8%8D%90/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90-V4.1.js",
+      "size": 32392,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-151",
+      "name": "全豆要-聚合音源_v9.7_97特供版_DeepSeek优化并修复版本",
+      "version": "V260714",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260714/%E6%8E%A8%E8%8D%90/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90_v9.7_97%E7%89%B9%E4%BE%9B%E7%89%88_DeepSeek%E4%BC%98%E5%8C%96%E5%B9%B6%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC.js",
+      "size": 30371,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-152",
+      "name": "念心音源-V1.0.1",
+      "version": "V260714",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260714/%E6%8E%A8%E8%8D%90/%E5%BF%B5%E5%BF%83%E9%9F%B3%E6%BA%90-V1.0.1.js",
+      "size": 27119,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-153",
+      "name": "洛雪科技[独家音源]_v4-会停用",
+      "version": "V260714",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260714/%E6%8E%A8%E8%8D%90/%E6%B4%9B%E9%9B%AA%E7%A7%91%E6%8A%80%255B%E7%8B%AC%E5%AE%B6%E9%9F%B3%E6%BA%90%255D_v4-%E4%BC%9A%E5%81%9C%E7%94%A8.js",
+      "size": 114852,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-154",
+      "name": "音乐下载器_v6",
+      "version": "V260714",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260714/%E6%8E%A8%E8%8D%90/%E9%9F%B3%E4%B9%90%E4%B8%8B%E8%BD%BD%E5%99%A8_v6.js",
+      "size": 1822744,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-155",
+      "name": "HUIBQ音源",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E5%85%B6%E4%BB%96/HUIBQ%E9%9F%B3%E6%BA%90.js",
+      "size": 2727,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-156",
+      "name": "fish-music音源",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E5%85%B6%E4%BB%96/fish-music%E9%9F%B3%E6%BA%90.js",
+      "size": 10096,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-157",
+      "name": "hywV1.0.0",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E5%85%B6%E4%BB%96/hywV1.0.0.js",
+      "size": 7542,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-158",
+      "name": "忆音音源_v1",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E5%85%B6%E4%BB%96/%E5%BF%86%E9%9F%B3%E9%9F%B3%E6%BA%90_v1.js",
+      "size": 1498,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-159",
+      "name": "收集の聚合接口",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E5%85%B6%E4%BB%96/%E6%94%B6%E9%9B%86%E3%81%AE%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.js",
+      "size": 2931,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-160",
+      "name": "溯音音源_v1",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E5%85%B6%E4%BB%96/%E6%BA%AF%E9%9F%B3%E9%9F%B3%E6%BA%90_v1.js",
+      "size": 17656,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-161",
+      "name": "统一音乐源",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E5%85%B6%E4%BB%96/%E7%BB%9F%E4%B8%80%E9%9F%B3%E4%B9%90%E6%BA%90.js",
+      "size": 9245,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-162",
+      "name": "聚合API",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E5%85%B6%E4%BB%96/%E8%81%9A%E5%90%88API.js",
+      "size": 1002,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-163",
+      "name": "西瓜聚合",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E5%85%B6%E4%BB%96/%E8%A5%BF%E7%93%9C%E8%81%9A%E5%90%88.js",
+      "size": 42834,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-164",
+      "name": "野花音源_",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E5%85%B6%E4%BB%96/%E9%87%8E%E8%8A%B1%E9%9F%B3%E6%BA%90_.js",
+      "size": 10057,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-165",
+      "name": "野草音源",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E5%85%B6%E4%BB%96/%E9%87%8E%E8%8D%89%E9%9F%B3%E6%BA%90.js",
+      "size": 9176,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-166",
+      "name": "非常刀260424【kw-flac_;_wy-320k最高flac24但是不稳定_;__mg-320k】",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E5%85%B6%E4%BB%96/%E9%9D%9E%E5%B8%B8%E5%88%80260424%E3%80%90kw-flac_;_wy-320k%E6%9C%80%E9%AB%98flac24%E4%BD%86%E6%98%AF%E4%B8%8D%E7%A8%B3%E5%AE%9A_;__mg-320k%E3%80%91.js",
+      "size": 15310,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-167",
+      "name": "lx-玉宁熙 (2)",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E6%8E%A8%E8%8D%90/lx-%E7%8E%89%E5%AE%81%E7%86%99%2520%25282%2529.js",
+      "size": 60716,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-168",
+      "name": "xinghai-music-sourcev2.3.7",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E6%8E%A8%E8%8D%90/xinghai-music-sourcev2.3.7.js",
+      "size": 13130,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-169",
+      "name": "【推荐】长青SVIP音源v1.2.0（全平台支持无损）",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E6%8E%A8%E8%8D%90/%E3%80%90%E6%8E%A8%E8%8D%90%E3%80%91%E9%95%BF%E9%9D%92SVIP%E9%9F%B3%E6%BA%90v1.2.0%EF%BC%88%E5%85%A8%E5%B9%B3%E5%8F%B0%E6%94%AF%E6%8C%81%E6%97%A0%E6%8D%9F%EF%BC%89.js",
+      "size": 24532,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-170",
+      "name": "全豆要-聚合音源-V4.1",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E6%8E%A8%E8%8D%90/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90-V4.1.js",
+      "size": 32392,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-171",
+      "name": "全豆要-聚合音源_v9.7_97特供版_DeepSeek优化并修复版本",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E6%8E%A8%E8%8D%90/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90_v9.7_97%E7%89%B9%E4%BE%9B%E7%89%88_DeepSeek%E4%BC%98%E5%8C%96%E5%B9%B6%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC.js",
+      "size": 30371,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-172",
+      "name": "念心音源-V1.0.1",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E6%8E%A8%E8%8D%90/%E5%BF%B5%E5%BF%83%E9%9F%B3%E6%BA%90-V1.0.1.js",
+      "size": 27119,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-173",
+      "name": "星海2.3.8测试",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E6%8E%A8%E8%8D%90/%E6%98%9F%E6%B5%B72.3.8%E6%B5%8B%E8%AF%95.js",
+      "size": 13259,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-174",
+      "name": "洛雪科技[独家音源]_v4-会停用",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E6%8E%A8%E8%8D%90/%E6%B4%9B%E9%9B%AA%E7%A7%91%E6%8A%80%255B%E7%8B%AC%E5%AE%B6%E9%9F%B3%E6%BA%90%255D_v4-%E4%BC%9A%E5%81%9C%E7%94%A8.js",
+      "size": 114852,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-175",
+      "name": "音乐下载器_v6",
+      "version": "V260716",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260716/%E6%8E%A8%E8%8D%90/%E9%9F%B3%E4%B9%90%E4%B8%8B%E8%BD%BD%E5%99%A8_v6.js",
+      "size": 1822744,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-176",
+      "name": "(推荐)裤佬SVIP音源（酷狗挂了）",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E5%85%B6%E4%BB%96/%2528%E6%8E%A8%E8%8D%90%2529%E8%A3%A4%E4%BD%ACSVIP%E9%9F%B3%E6%BA%90%EF%BC%88%E9%85%B7%E7%8B%97%E6%8C%82%E4%BA%86%EF%BC%89.js",
+      "size": 99113,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-177",
+      "name": "Hei Music1.3.1（即将恢复）",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E5%85%B6%E4%BB%96/Hei%2520Music1.3.1%EF%BC%88%E5%8D%B3%E5%B0%86%E6%81%A2%E5%A4%8D%EF%BC%89.js",
+      "size": 54668,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-178",
+      "name": "gdstudio音乐源 v1.0.1（仅支持网易）",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E5%85%B6%E4%BB%96/gdstudio%E9%9F%B3%E4%B9%90%E6%BA%90%2520v1.0.1%EF%BC%88%E4%BB%85%E6%94%AF%E6%8C%81%E7%BD%91%E6%98%93%EF%BC%89.js",
+      "size": 8689,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-179",
+      "name": "全豆要-聚合音源-V4.1（酷狗挂了）",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E5%85%B6%E4%BB%96/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90-V4.1%EF%BC%88%E9%85%B7%E7%8B%97%E6%8C%82%E4%BA%86%EF%BC%89.js",
+      "size": 32392,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-180",
+      "name": "念心音源 v1.0.2",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E5%85%B6%E4%BB%96/%E5%BF%B5%E5%BF%83%E9%9F%B3%E6%BA%90%2520v1.0.2.js",
+      "size": 26672,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-181",
+      "name": "收集の聚合接口",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E5%85%B6%E4%BB%96/%E6%94%B6%E9%9B%86%E3%81%AE%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.js",
+      "size": 2931,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-182",
+      "name": "溯音音源_v1",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E5%85%B6%E4%BB%96/%E6%BA%AF%E9%9F%B3%E9%9F%B3%E6%BA%90_v1.js",
+      "size": 17656,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-183",
+      "name": "稳定版音源 v1.0.3",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E5%85%B6%E4%BB%96/%E7%A8%B3%E5%AE%9A%E7%89%88%E9%9F%B3%E6%BA%90%2520v1.0.3.js",
+      "size": 3292,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-184",
+      "name": "统一音乐源",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E5%85%B6%E4%BB%96/%E7%BB%9F%E4%B8%80%E9%9F%B3%E4%B9%90%E6%BA%90.js",
+      "size": 9245,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-185",
+      "name": "聚合API接口 (CF) v3",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E5%85%B6%E4%BB%96/%E8%81%9A%E5%90%88API%E6%8E%A5%E5%8F%A3%2520%2528CF%2529%2520v3.js",
+      "size": 1005,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-186",
+      "name": "西瓜聚合",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E5%85%B6%E4%BB%96/%E8%A5%BF%E7%93%9C%E8%81%9A%E5%90%88.js",
+      "size": 42834,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-187",
+      "name": "非常刀 v5",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E5%85%B6%E4%BB%96/%E9%9D%9E%E5%B8%B8%E5%88%80%2520v5.js",
+      "size": 17846,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-188",
+      "name": "𝖧౿ᥣᥣ𝗈 Ԝ𝗈𝗋ᥣᑯ260809",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E5%85%B6%E4%BB%96/%F0%9D%96%A7%E0%B1%BF%E1%A5%A3%E1%A5%A3%F0%9D%97%88%2520%D4%9C%F0%9D%97%88%F0%9D%97%8B%E1%A5%A3%E1%91%AF260809.js",
+      "size": 21553,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-189",
+      "name": "HYWmusic_beta_公益测试",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E6%8E%A8%E8%8D%90/HYWmusic_beta_%E5%85%AC%E7%9B%8A%E6%B5%8B%E8%AF%95.js",
+      "size": 9057,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-190",
+      "name": "lx-玉宁熙V1.2.2",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E6%8E%A8%E8%8D%90/lx-%E7%8E%89%E5%AE%81%E7%86%99V1.2.2.js",
+      "size": 147347,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-191",
+      "name": "xinghai-music-sourcev2.3.11",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E6%8E%A8%E8%8D%90/xinghai-music-sourcev2.3.11.js",
+      "size": 12317,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-192",
+      "name": "墨澜聚合音源 v2.0.0",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E6%8E%A8%E8%8D%90/%E5%A2%A8%E6%BE%9C%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2520v2.0.0.js",
+      "size": 63787,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-193",
+      "name": "独家音源v4目前已停用",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E6%9C%AA%E6%B5%8B%E8%AF%95/%E7%8B%AC%E5%AE%B6%E9%9F%B3%E6%BA%90v4%E7%9B%AE%E5%89%8D%E5%B7%B2%E5%81%9C%E7%94%A8.js",
+      "size": 114852,
+      "tags": [
+        "未测试"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-194",
+      "name": "野花音源_",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E6%9C%AA%E6%B5%8B%E8%AF%95/%E9%87%8E%E8%8A%B1%E9%9F%B3%E6%BA%90_.js",
+      "size": 10057,
+      "tags": [
+        "未测试"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-195",
+      "name": "野草音源",
+      "version": "V260810",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260810/%E6%9C%AA%E6%B5%8B%E8%AF%95/%E9%87%8E%E8%8D%89%E9%9F%B3%E6%BA%90.js",
+      "size": 9176,
+      "tags": [
+        "未测试"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-196",
+      "name": "(推荐)裤佬SVIP音源（酷狗挂了）",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E5%85%B6%E4%BB%96/%2528%E6%8E%A8%E8%8D%90%2529%E8%A3%A4%E4%BD%ACSVIP%E9%9F%B3%E6%BA%90%EF%BC%88%E9%85%B7%E7%8B%97%E6%8C%82%E4%BA%86%EF%BC%89.js",
+      "size": 99113,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-197",
+      "name": "Hei Music1.3.1 (1)",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E5%85%B6%E4%BB%96/Hei%2520Music1.3.1%2520%25281%2529.js",
+      "size": 54668,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-198",
+      "name": "gdstudio音乐源 v1.0.1（仅支持网易）",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E5%85%B6%E4%BB%96/gdstudio%E9%9F%B3%E4%B9%90%E6%BA%90%2520v1.0.1%EF%BC%88%E4%BB%85%E6%94%AF%E6%8C%81%E7%BD%91%E6%98%93%EF%BC%89.js",
+      "size": 8689,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-199",
+      "name": "全豆要-聚合音源-V4.1（酷狗挂了）",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E5%85%B6%E4%BB%96/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90-V4.1%EF%BC%88%E9%85%B7%E7%8B%97%E6%8C%82%E4%BA%86%EF%BC%89.js",
+      "size": 32392,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-200",
+      "name": "念心音源 v1.0.2",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E5%85%B6%E4%BB%96/%E5%BF%B5%E5%BF%83%E9%9F%B3%E6%BA%90%2520v1.0.2.js",
+      "size": 26672,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-201",
+      "name": "收集の聚合接口",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E5%85%B6%E4%BB%96/%E6%94%B6%E9%9B%86%E3%81%AE%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.js",
+      "size": 2931,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-202",
+      "name": "星澜",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E5%85%B6%E4%BB%96/%E6%98%9F%E6%BE%9C.js",
+      "size": 73009,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-203",
+      "name": "溯音音源_v1",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E5%85%B6%E4%BB%96/%E6%BA%AF%E9%9F%B3%E9%9F%B3%E6%BA%90_v1.js",
+      "size": 17656,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-204",
+      "name": "稳定版音源 v1.0.3",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E5%85%B6%E4%BB%96/%E7%A8%B3%E5%AE%9A%E7%89%88%E9%9F%B3%E6%BA%90%2520v1.0.3.js",
+      "size": 3292,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-205",
+      "name": "统一音乐源",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E5%85%B6%E4%BB%96/%E7%BB%9F%E4%B8%80%E9%9F%B3%E4%B9%90%E6%BA%90.js",
+      "size": 9245,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-206",
+      "name": "聚合API接口 (CF) v3",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E5%85%B6%E4%BB%96/%E8%81%9A%E5%90%88API%E6%8E%A5%E5%8F%A3%2520%2528CF%2529%2520v3.js",
+      "size": 1005,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-207",
+      "name": "西瓜聚合",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E5%85%B6%E4%BB%96/%E8%A5%BF%E7%93%9C%E8%81%9A%E5%90%88.js",
+      "size": 42834,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-208",
+      "name": "非常刀 v5",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E5%85%B6%E4%BB%96/%E9%9D%9E%E5%B8%B8%E5%88%80%2520v5.js",
+      "size": 17846,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-209",
+      "name": "𝖧౿ᥣᥣ𝗈 Ԝ𝗈𝗋ᥣᑯ260809",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E5%85%B6%E4%BB%96/%F0%9D%96%A7%E0%B1%BF%E1%A5%A3%E1%A5%A3%F0%9D%97%88%2520%D4%9C%F0%9D%97%88%F0%9D%97%8B%E1%A5%A3%E1%91%AF260809.js",
+      "size": 21553,
+      "tags": [
+        "其他"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-210",
+      "name": "HYWmusic_beta_公益测试",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E6%8E%A8%E8%8D%90/HYWmusic_beta_%E5%85%AC%E7%9B%8A%E6%B5%8B%E8%AF%95.js",
+      "size": 9057,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-211",
+      "name": "K×H测试 v1.7.17",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E6%8E%A8%E8%8D%90/K%C3%97H%E6%B5%8B%E8%AF%95%2520v1.7.17.js",
+      "size": 68271,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-212",
+      "name": "lx-玉宁熙V1.2.2",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E6%8E%A8%E8%8D%90/lx-%E7%8E%89%E5%AE%81%E7%86%99V1.2.2.js",
+      "size": 147347,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-213",
+      "name": "xinghai-music-sourcev2.3.11",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E6%8E%A8%E8%8D%90/xinghai-music-sourcev2.3.11.js",
+      "size": 12317,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-214",
+      "name": "墨澜聚合音源 v2.0.0",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E6%8E%A8%E8%8D%90/%E5%A2%A8%E6%BE%9C%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2520v2.0.0.js",
+      "size": 63787,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-215",
+      "name": "墨澜音乐源v2.3.0",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E6%8E%A8%E8%8D%90/%E5%A2%A8%E6%BE%9C%E9%9F%B3%E4%B9%90%E6%BA%90v2.3.0.js",
+      "size": 88879,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-216",
+      "name": "屿溪-终章",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E6%8E%A8%E8%8D%90/%E5%B1%BF%E6%BA%AA-%E7%BB%88%E7%AB%A0.js",
+      "size": 128060,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-217",
+      "name": "独家音源V5",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E6%8E%A8%E8%8D%90/%E7%8B%AC%E5%AE%B6%E9%9F%B3%E6%BA%90V5.js",
+      "size": 62829,
+      "tags": [
+        "推荐"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-218",
+      "name": "野花音源_",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E6%9C%AA%E6%B5%8B%E8%AF%95/%E9%87%8E%E8%8A%B1%E9%9F%B3%E6%BA%90_.js",
+      "size": 10057,
+      "tags": [
+        "未测试"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-219",
+      "name": "野草音源",
+      "version": "V260817",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260817/%E6%9C%AA%E6%B5%8B%E8%AF%95/%E9%87%8E%E8%8D%89%E9%9F%B3%E6%BA%90.js",
+      "size": 9176,
+      "tags": [
+        "未测试"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-220",
+      "name": "(推荐)裤佬SVIP音源（酷狗挂了）",
+      "version": "V260907",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260907/%2528%E6%8E%A8%E8%8D%90%2529%E8%A3%A4%E4%BD%ACSVIP%E9%9F%B3%E6%BA%90%EF%BC%88%E9%85%B7%E7%8B%97%E6%8C%82%E4%BA%86%EF%BC%89.js",
+      "size": 99113,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-221",
+      "name": "gdstudio音乐源 v1.0.1（仅支持网易）",
+      "version": "V260907",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260907/gdstudio%E9%9F%B3%E4%B9%90%E6%BA%90%2520v1.0.1%EF%BC%88%E4%BB%85%E6%94%AF%E6%8C%81%E7%BD%91%E6%98%93%EF%BC%89.js",
+      "size": 8689,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-222",
+      "name": "lx-玉宁熙V1.2.2",
+      "version": "V260907",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260907/lx-%E7%8E%89%E5%AE%81%E7%86%99V1.2.2.js",
+      "size": 147347,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-223",
+      "name": "stellarwave-v3.2.0",
+      "version": "V260907",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260907/stellarwave-v3.2.0.js",
+      "size": 79856,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-224",
+      "name": "全豆要-聚合音源-V4.1（酷狗挂了）",
+      "version": "V260907",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260907/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90-V4.1%EF%BC%88%E9%85%B7%E7%8B%97%E6%8C%82%E4%BA%86%EF%BC%89.js",
+      "size": 32392,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-225",
+      "name": "墨澜音乐源v2.3.0",
+      "version": "V260907",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260907/%E5%A2%A8%E6%BE%9C%E9%9F%B3%E4%B9%90%E6%BA%90v2.3.0.js",
+      "size": 88879,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-226",
+      "name": "屿溪-终章",
+      "version": "V260907",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260907/%E5%B1%BF%E6%BA%AA-%E7%BB%88%E7%AB%A0.js",
+      "size": 128060,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-227",
+      "name": "幻音音源 v3",
+      "version": "V260907",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260907/%E5%B9%BB%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v3.js",
+      "size": 7316,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-228",
+      "name": "念心音源 v1.0.2",
+      "version": "V260907",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260907/%E5%BF%B5%E5%BF%83%E9%9F%B3%E6%BA%90%2520v1.0.2.js",
+      "size": 26672,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-229",
+      "name": "收集の聚合接口",
+      "version": "V260907",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260907/%E6%94%B6%E9%9B%86%E3%81%AE%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.js",
+      "size": 2931,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-230",
+      "name": "溯音音源_v1",
+      "version": "V260907",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260907/%E6%BA%AF%E9%9F%B3%E9%9F%B3%E6%BA%90_v1.js",
+      "size": 17656,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-231",
+      "name": "独家音源V5",
+      "version": "V260907",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260907/%E7%8B%AC%E5%AE%B6%E9%9F%B3%E6%BA%90V5.js",
+      "size": 62829,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-232",
+      "name": "稳定版音源 v1.0.3",
+      "version": "V260907",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260907/%E7%A8%B3%E5%AE%9A%E7%89%88%E9%9F%B3%E6%BA%90%2520v1.0.3.js",
+      "size": 3292,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-233",
+      "name": "统一音乐源",
+      "version": "V260907",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260907/%E7%BB%9F%E4%B8%80%E9%9F%B3%E4%B9%90%E6%BA%90.js",
+      "size": 9245,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-234",
+      "name": "聚合API接口 (CF) v3",
+      "version": "V260907",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260907/%E8%81%9A%E5%90%88API%E6%8E%A5%E5%8F%A3%2520%2528CF%2529%2520v3.js",
+      "size": 1005,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-235",
+      "name": "西瓜聚合",
+      "version": "V260907",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260907/%E8%A5%BF%E7%93%9C%E8%81%9A%E5%90%88.js",
+      "size": 42834,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-236",
+      "name": "非常刀 v5",
+      "version": "V260907",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260907/%E9%9D%9E%E5%B8%B8%E5%88%80%2520v5.js",
+      "size": 17846,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-237",
+      "name": "𝖧౿ᥣᥣ𝗈 Ԝ𝗈𝗋ᥣᑯ260809",
+      "version": "V260907",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V260907/%F0%9D%96%A7%E0%B1%BF%E1%A5%A3%E1%A5%A3%F0%9D%97%88%2520%D4%9C%F0%9D%97%88%F0%9D%97%8B%E1%A5%A3%E1%91%AF260809.js",
+      "size": 21553,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-238",
+      "name": "HYWmusic_公益版V1.2.0",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%B8%80%E8%88%AC/HYWmusic_%E5%85%AC%E7%9B%8A%E7%89%88V1.2.0.js",
+      "size": 12082,
+      "tags": [
+        "一般"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-239",
+      "name": "fish-music1.9.0",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%B8%80%E8%88%AC/fish-music1.9.0.js",
+      "size": 639619,
+      "tags": [
+        "一般"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-240",
+      "name": "gdstudio音乐源 v1.0.1（仅支持网易）",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%B8%80%E8%88%AC/gdstudio%E9%9F%B3%E4%B9%90%E6%BA%90%2520v1.0.1%EF%BC%88%E4%BB%85%E6%94%AF%E6%8C%81%E7%BD%91%E6%98%93%EF%BC%89.js",
+      "size": 8689,
+      "tags": [
+        "一般"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-241",
+      "name": "lx-玉宁熙1.2.5",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%B8%80%E8%88%AC/lx-%E7%8E%89%E5%AE%81%E7%86%991.2.5.js",
+      "size": 144621,
+      "tags": [
+        "一般"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-242",
+      "name": "stellarwave-v0.0.14",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%B8%80%E8%88%AC/stellarwave-v0.0.14.js",
+      "size": 48712,
+      "tags": [
+        "一般"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-243",
+      "name": "stellarwave-v4.0.2",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%B8%80%E8%88%AC/stellarwave-v4.0.2.js",
+      "size": 74386,
+      "tags": [
+        "一般"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-244",
+      "name": "全豆要-聚合音源-V4.1（酷狗挂了）",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%B8%80%E8%88%AC/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90-V4.1%EF%BC%88%E9%85%B7%E7%8B%97%E6%8C%82%E4%BA%86%EF%BC%89.js",
+      "size": 32392,
+      "tags": [
+        "一般"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-245",
+      "name": "幻音音源 v3",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%B8%80%E8%88%AC/%E5%B9%BB%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v3.js",
+      "size": 7316,
+      "tags": [
+        "一般"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-246",
+      "name": "念心音源 v1.0.2",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%B8%80%E8%88%AC/%E5%BF%B5%E5%BF%83%E9%9F%B3%E6%BA%90%2520v1.0.2.js",
+      "size": 26672,
+      "tags": [
+        "一般"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-247",
+      "name": "收集の聚合接口",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%B8%80%E8%88%AC/%E6%94%B6%E9%9B%86%E3%81%AE%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.js",
+      "size": 2931,
+      "tags": [
+        "一般"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-248",
+      "name": "溯音音源_v1",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%B8%80%E8%88%AC/%E6%BA%AF%E9%9F%B3%E9%9F%B3%E6%BA%90_v1.js",
+      "size": 17656,
+      "tags": [
+        "一般"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-249",
+      "name": "稳定版音源 v1.0.3",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%B8%80%E8%88%AC/%E7%A8%B3%E5%AE%9A%E7%89%88%E9%9F%B3%E6%BA%90%2520v1.0.3.js",
+      "size": 3292,
+      "tags": [
+        "一般"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-250",
+      "name": "统一音乐源",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%B8%80%E8%88%AC/%E7%BB%9F%E4%B8%80%E9%9F%B3%E4%B9%90%E6%BA%90.js",
+      "size": 9245,
+      "tags": [
+        "一般"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-251",
+      "name": "聚合API接口 (CF) v3",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%B8%80%E8%88%AC/%E8%81%9A%E5%90%88API%E6%8E%A5%E5%8F%A3%2520%2528CF%2529%2520v3.js",
+      "size": 1005,
+      "tags": [
+        "一般"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-252",
+      "name": "西瓜聚合",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%B8%80%E8%88%AC/%E8%A5%BF%E7%93%9C%E8%81%9A%E5%90%88.js",
+      "size": 42834,
+      "tags": [
+        "一般"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-253",
+      "name": "轻量音源_多源并行（酷我哇网易云无损+其他mp3）",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%B8%80%E8%88%AC/%E8%BD%BB%E9%87%8F%E9%9F%B3%E6%BA%90_%E5%A4%9A%E6%BA%90%E5%B9%B6%E8%A1%8C%EF%BC%88%E9%85%B7%E6%88%91%E5%93%87%E7%BD%91%E6%98%93%E4%BA%91%E6%97%A0%E6%8D%9F+%E5%85%B6%E4%BB%96mp3%EF%BC%89.js",
+      "size": 26416,
+      "tags": [
+        "一般"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-254",
+      "name": "非常刀 v5",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%B8%80%E8%88%AC/%E9%9D%9E%E5%B8%B8%E5%88%80%2520v5.js",
+      "size": 17846,
+      "tags": [
+        "一般"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-255",
+      "name": "HelloWorld音源(中秋快乐)",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%BC%98%E8%B4%A8/HelloWorld%E9%9F%B3%E6%BA%90%2528%E4%B8%AD%E7%A7%8B%E5%BF%AB%E4%B9%90%2529.js",
+      "size": 21421,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-256",
+      "name": "回避聚合V0.0.1",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%BC%98%E8%B4%A8/%E5%9B%9E%E9%81%BF%E8%81%9A%E5%90%88V0.0.1.js",
+      "size": 83639,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-257",
+      "name": "墨澜音乐源v2.3.6",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%BC%98%E8%B4%A8/%E5%A2%A8%E6%BE%9C%E9%9F%B3%E4%B9%90%E6%BA%90v2.3.6.js",
+      "size": 583536,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-258",
+      "name": "安妮独家音源 v5",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%BC%98%E8%B4%A8/%E5%AE%89%E5%A6%AE%E7%8B%AC%E5%AE%B6%E9%9F%B3%E6%BA%90%2520v5.js",
+      "size": 6968,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-259",
+      "name": "星海音乐源 v2.3.18",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%BC%98%E8%B4%A8/%E6%98%9F%E6%B5%B7%E9%9F%B3%E4%B9%90%E6%BA%90%2520v2.3.18.js",
+      "size": 21494,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-260",
+      "name": "独家音源-v7",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%BC%98%E8%B4%A8/%E7%8B%AC%E5%AE%B6%E9%9F%B3%E6%BA%90-v7.js",
+      "size": 64094,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-261",
+      "name": "裤佬SVIP音源(二改整合版) v3.0.0",
+      "version": "V261108",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261108/%E4%BC%98%E8%B4%A8/%E8%A3%A4%E4%BD%ACSVIP%E9%9F%B3%E6%BA%90%2528%E4%BA%8C%E6%94%B9%E6%95%B4%E5%90%88%E7%89%88%2529%2520v3.0.0.js",
+      "size": 16108,
+      "tags": [
+        "优质"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-262",
+      "name": "Ciallo~",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/Ciallo~.js",
+      "size": 5141,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-263",
+      "name": "HUIBQ音源",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/HUIBQ%E9%9F%B3%E6%BA%90.js",
+      "size": 2727,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-264",
+      "name": "KE-DES",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/KE-DES.js",
+      "size": 5257,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-265",
+      "name": "yibai酷我流式V4",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/yibai%E9%85%B7%E6%88%91%E6%B5%81%E5%BC%8FV4.js",
+      "size": 2012,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-266",
+      "name": "忆音音源 v1",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/%E5%BF%86%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v1.js",
+      "size": 1498,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-267",
+      "name": "惜缘 v1",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/%E6%83%9C%E7%BC%98%2520v1.js",
+      "size": 2274,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-268",
+      "name": "收集の聚合接口",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E4%B8%80%E8%88%AC-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0FLAC%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0320k/%E6%94%B6%E9%9B%86%E3%81%AE%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.js",
+      "size": 2931,
+      "tags": [
+        "一般-支持单平台FLAC或多平台320k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-269",
+      "name": "念心音源 v1.0.0",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E5%BF%B5%E5%BF%83%E9%9F%B3%E6%BA%90%2520v1.0.0.js",
+      "size": 27246,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-270",
+      "name": "洛雪科技[独家音源] v4-会停用",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E6%B4%9B%E9%9B%AA%E7%A7%91%E6%8A%80%255B%E7%8B%AC%E5%AE%B6%E9%9F%B3%E6%BA%90%255D%2520v4-%E4%BC%9A%E5%81%9C%E7%94%A8.js",
+      "size": 114852,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-271",
+      "name": "聚合API",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E4%BC%98%E8%B4%A8-%E6%94%AF%E6%8C%81%E5%9B%9B%E5%B9%B3%E5%8F%B0FLAC/%E8%81%9A%E5%90%88API.js",
+      "size": 1002,
+      "tags": [
+        "优质-支持四平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-272",
+      "name": "fish-music音源",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/fish-music%E9%9F%B3%E6%BA%90.js",
+      "size": 10096,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-273",
+      "name": "星海音乐源新",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E6%98%9F%E6%B5%B7%E9%9F%B3%E4%B9%90%E6%BA%90%E6%96%B0.js",
+      "size": 15555,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-274",
+      "name": "洛雪音乐源 1.0.0 v2-fix",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E6%B4%9B%E9%9B%AA%E9%9F%B3%E4%B9%90%E6%BA%90%25201.0.0%2520v2-fix.js",
+      "size": 28852,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-275",
+      "name": "溯音音源 v1",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E6%BA%AF%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v1.js",
+      "size": 17656,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-276",
+      "name": "玉宁熙-需自行配置-不推荐",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E7%8E%89%E5%AE%81%E7%86%99-%E9%9C%80%E8%87%AA%E8%A1%8C%E9%85%8D%E7%BD%AE-%E4%B8%8D%E6%8E%A8%E8%8D%90.js",
+      "size": 67025,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-277",
+      "name": "统一音乐源",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E7%BB%9F%E4%B8%80%E9%9F%B3%E4%B9%90%E6%BA%90.js",
+      "size": 9245,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-278",
+      "name": "长青SVIP音源",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E8%89%AF%E5%A5%BD-%E6%94%AF%E6%8C%81%E8%87%B3%E5%B0%91%E4%B8%A4%E5%B9%B3%E5%8F%B0FLAC/%E9%95%BF%E9%9D%92SVIP%E9%9F%B3%E6%BA%90.js",
+      "size": 30739,
+      "tags": [
+        "良好-支持至少两平台FLAC"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-279",
+      "name": "FreeListen-需自备网易云VIP密钥",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E8%BE%83%E5%B7%AE-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0320k%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0128k/FreeListen-%E9%9C%80%E8%87%AA%E5%A4%87%E7%BD%91%E6%98%93%E4%BA%91VIP%E5%AF%86%E9%92%A5.js",
+      "size": 18176,
+      "tags": [
+        "较差-支持单平台320k或多平台128k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-280",
+      "name": "春日影-单平台128k",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E8%BE%83%E5%B7%AE-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0320k%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0128k/%E6%98%A5%E6%97%A5%E5%BD%B1-%E5%8D%95%E5%B9%B3%E5%8F%B0128k.js",
+      "size": 1750,
+      "tags": [
+        "较差-支持单平台320k或多平台128k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-281",
+      "name": "野花音源",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E8%BE%83%E5%B7%AE-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0320k%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0128k/%E9%87%8E%E8%8A%B1%E9%9F%B3%E6%BA%90%2520.js",
+      "size": 10057,
+      "tags": [
+        "较差-支持单平台320k或多平台128k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-282",
+      "name": "野草音源",
+      "version": "v260212",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260212/%E8%BE%83%E5%B7%AE-%E6%94%AF%E6%8C%81%E5%8D%95%E5%B9%B3%E5%8F%B0320k%E6%88%96%E5%A4%9A%E5%B9%B3%E5%8F%B0128k/%E9%87%8E%E8%8D%89%E9%9F%B3%E6%BA%90.js",
+      "size": 9176,
+      "tags": [
+        "较差-支持单平台320k或多平台128k"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-283",
+      "name": "全豆要-聚合音源-V4.1",
+      "version": "v260429",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260429/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90-V4.1.js",
+      "size": 32392,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-284",
+      "name": "念心音源-V1.0.1",
+      "version": "v260429",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260429/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E5%BF%B5%E5%BF%83%E9%9F%B3%E6%BA%90-V1.0.1.js",
+      "size": 27119,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-285",
+      "name": "长青SVIP音源-V1.1.1",
+      "version": "v260429",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260429/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E9%95%BF%E9%9D%92SVIP%E9%9F%B3%E6%BA%90-V1.1.1.js",
+      "size": 30739,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-286",
+      "name": "HUIBQ音源",
+      "version": "v260429",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260429/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/HUIBQ%E9%9F%B3%E6%BA%90.js",
+      "size": 2727,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-287",
+      "name": "fish-music音源",
+      "version": "v260429",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260429/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/fish-music%E9%9F%B3%E6%BA%90.js",
+      "size": 10096,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-288",
+      "name": "lx-玉宁熙 v1.1.5 需自行配置",
+      "version": "v260429",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260429/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/lx-%E7%8E%89%E5%AE%81%E7%86%99%2520v1.1.5%2520%E9%9C%80%E8%87%AA%E8%A1%8C%E9%85%8D%E7%BD%AE.js",
+      "size": 60797,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-289",
+      "name": "xinghai-music-source2.3.0",
+      "version": "v260429",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260429/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/xinghai-music-source2.3.0.js",
+      "size": 22914,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-290",
+      "name": "收集の聚合接口",
+      "version": "v260429",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260429/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/%E6%94%B6%E9%9B%86%E3%81%AE%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.js",
+      "size": 2931,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-291",
+      "name": "溯音音源 v1",
+      "version": "v260429",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260429/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/%E6%BA%AF%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v1.js",
+      "size": 17656,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-292",
+      "name": "聚合API",
+      "version": "v260429",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260429/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/%E8%81%9A%E5%90%88API.js",
+      "size": 1002,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-293",
+      "name": "非常刀260424【kw-flac ; wy-320k最高flac24但是不稳定 ;  mg-320k】",
+      "version": "v260429",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260429/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/%E9%9D%9E%E5%B8%B8%E5%88%80260424%E3%80%90kw-flac%2520;%2520wy-320k%E6%9C%80%E9%AB%98flac24%E4%BD%86%E6%98%AF%E4%B8%8D%E7%A8%B3%E5%AE%9A%2520;%2520%2520mg-320k%E3%80%91.js",
+      "size": 15310,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-294",
+      "name": "lx-玉宁熙 【kg-flac24 ; kw-flac24 ; wy-master ; tx-master ; mg-failed】",
+      "version": "v260429",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260429/%E7%AC%AC%E4%BA%8C%E6%89%B9%E6%AC%A1/lx-%E7%8E%89%E5%AE%81%E7%86%99%2520%E3%80%90kg-flac24%2520;%2520kw-flac24%2520;%2520wy-master%2520;%2520tx-master%2520;%2520mg-failed%E3%80%91.js",
+      "size": 65072,
+      "tags": [
+        "第二批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-295",
+      "name": "忆音音源 v1",
+      "version": "v260429",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260429/%E7%AC%AC%E4%BA%8C%E6%89%B9%E6%AC%A1/%E5%BF%86%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v1.js",
+      "size": 1498,
+      "tags": [
+        "第二批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-296",
+      "name": "统一音乐源",
+      "version": "v260429",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260429/%E7%AC%AC%E4%BA%8C%E6%89%B9%E6%AC%A1/%E7%BB%9F%E4%B8%80%E9%9F%B3%E4%B9%90%E6%BA%90.js",
+      "size": 9245,
+      "tags": [
+        "第二批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-297",
+      "name": "HUIBQ音源",
+      "version": "v260511",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260511/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/HUIBQ%E9%9F%B3%E6%BA%90.js",
+      "size": 2727,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-298",
+      "name": "【推荐】长青SVIP音源v1.2.0（全平台支持无损）",
+      "version": "v260511",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260511/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E3%80%90%E6%8E%A8%E8%8D%90%E3%80%91%E9%95%BF%E9%9D%92SVIP%E9%9F%B3%E6%BA%90v1.2.0%EF%BC%88%E5%85%A8%E5%B9%B3%E5%8F%B0%E6%94%AF%E6%8C%81%E6%97%A0%E6%8D%9F%EF%BC%89.js",
+      "size": 24532,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-299",
+      "name": "全豆要-聚合音源 v9.7 97特供版 DeepSeek优化并修复版本",
+      "version": "v260511",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260511/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%2520v9.7%252097%E7%89%B9%E4%BE%9B%E7%89%88%2520DeepSeek%E4%BC%98%E5%8C%96%E5%B9%B6%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC.js",
+      "size": 30371,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-300",
+      "name": "全豆要-聚合音源-V4.1",
+      "version": "v260511",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260511/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E5%85%A8%E8%B1%86%E8%A6%81-%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90-V4.1.js",
+      "size": 32392,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-301",
+      "name": "忆音音源 v1",
+      "version": "v260511",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260511/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E5%BF%86%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v1.js",
+      "size": 1498,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-302",
+      "name": "念心音源-V1.0.1",
+      "version": "v260511",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260511/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E5%BF%B5%E5%BF%83%E9%9F%B3%E6%BA%90-V1.0.1.js",
+      "size": 27119,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-303",
+      "name": "洛雪科技[独家音源] v4-会停用",
+      "version": "v260511",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260511/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E6%B4%9B%E9%9B%AA%E7%A7%91%E6%8A%80%255B%E7%8B%AC%E5%AE%B6%E9%9F%B3%E6%BA%90%255D%2520v4-%E4%BC%9A%E5%81%9C%E7%94%A8.js",
+      "size": 114852,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-304",
+      "name": "野花音源",
+      "version": "v260511",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260511/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E9%87%8E%E8%8A%B1%E9%9F%B3%E6%BA%90%2520.js",
+      "size": 10057,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-305",
+      "name": "野草音源",
+      "version": "v260511",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260511/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E9%87%8E%E8%8D%89%E9%9F%B3%E6%BA%90.js",
+      "size": 9176,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-306",
+      "name": "音乐下载器 v6",
+      "version": "v260511",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260511/%E7%AC%AC%E4%B8%80%E6%89%B9%E6%AC%A1/%E9%9F%B3%E4%B9%90%E4%B8%8B%E8%BD%BD%E5%99%A8%2520v6.js",
+      "size": 1822744,
+      "tags": [
+        "第一批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-307",
+      "name": "fish-music音源",
+      "version": "v260511",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260511/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/fish-music%E9%9F%B3%E6%BA%90.js",
+      "size": 10096,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-308",
+      "name": "xinghai-music-source2.3.0",
+      "version": "v260511",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260511/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/xinghai-music-source2.3.0.js",
+      "size": 22914,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-309",
+      "name": "统一音乐源",
+      "version": "v260511",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260511/%E7%AC%AC%E4%B8%89%E6%89%B9%E6%AC%A1/%E7%BB%9F%E4%B8%80%E9%9F%B3%E4%B9%90%E6%BA%90.js",
+      "size": 9245,
+      "tags": [
+        "第三批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-310",
+      "name": "HYWmusic_beta_v0.21.7456 - 2026-05-03T081429.145",
+      "version": "v260511",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260511/%E7%AC%AC%E4%BA%8C%E6%89%B9%E6%AC%A1/HYWmusic_beta_v0.21.7456%2520-%25202026-05-03T081429.145.js",
+      "size": 6231,
+      "tags": [
+        "第二批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-311",
+      "name": "lx-玉宁熙 【kg-flac24 ; kw-flac24 ; wy-master ; tx-master ; mg-failed】",
+      "version": "v260511",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260511/%E7%AC%AC%E4%BA%8C%E6%89%B9%E6%AC%A1/lx-%E7%8E%89%E5%AE%81%E7%86%99%2520%E3%80%90kg-flac24%2520;%2520kw-flac24%2520;%2520wy-master%2520;%2520tx-master%2520;%2520mg-failed%E3%80%91.js",
+      "size": 65072,
+      "tags": [
+        "第二批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-312",
+      "name": "收集の聚合接口",
+      "version": "v260511",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260511/%E7%AC%AC%E4%BA%8C%E6%89%B9%E6%AC%A1/%E6%94%B6%E9%9B%86%E3%81%AE%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.js",
+      "size": 2931,
+      "tags": [
+        "第二批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-313",
+      "name": "溯音音源 v1",
+      "version": "v260511",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260511/%E7%AC%AC%E4%BA%8C%E6%89%B9%E6%AC%A1/%E6%BA%AF%E9%9F%B3%E9%9F%B3%E6%BA%90%2520v1.js",
+      "size": 17656,
+      "tags": [
+        "第二批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-314",
+      "name": "聚合API",
+      "version": "v260511",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260511/%E7%AC%AC%E4%BA%8C%E6%89%B9%E6%AC%A1/%E8%81%9A%E5%90%88API.js",
+      "size": 1002,
+      "tags": [
+        "第二批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-315",
+      "name": "非常刀260424【kw-flac ; wy-320k最高flac24但是不稳定 ;  mg-320k】",
+      "version": "v260511",
+      "scriptUrl": "https://raw.githubusercontent.com/sowahsun/lxmusic-/main/v260511/%E7%AC%AC%E4%BA%8C%E6%89%B9%E6%AC%A1/%E9%9D%9E%E5%B8%B8%E5%88%80260424%E3%80%90kw-flac%2520;%2520wy-320k%E6%9C%80%E9%AB%98flac24%E4%BD%86%E6%98%AF%E4%B8%8D%E7%A8%B3%E5%AE%9A%2520;%2520%2520mg-320k%E3%80%91.js",
+      "size": 15310,
+      "tags": [
+        "第二批次"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "mirror-316",
+      "name": "HYWmusic_.V1.2.0",
+      "version": "Macrohard0001",
+      "scriptUrl": "https://github.com/Macrohard0001/lx-ikun-music-sources/releases/download/V261008/HYWmusic_.V1.2.0.js",
+      "size": 12082,
+      "tags": [
+        "优质_V261008"
+      ],
+      "status": "ok"
+    }
+  ]
+}

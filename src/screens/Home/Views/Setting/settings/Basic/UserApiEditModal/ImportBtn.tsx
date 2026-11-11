@@ -5,6 +5,7 @@ import Text from '@/components/common/Text'
 import { useI18n } from '@/lang'
 import ScriptImportExport, { type ScriptImportExportType } from './ScriptImportExport'
 import ScriptImportOnline, { type ScriptImportOnlineType } from './ScriptImportOnline'
+import SourceLibrary, { type SourceLibraryType } from './SourceLibrary'
 import { state } from '@/store/userApi'
 import { tipDialog } from '@/utils/tools'
 
@@ -20,17 +21,25 @@ export default ({ btnStyle }: BtnProps) => {
   const theme = useTheme()
   const scriptImportExportRef = useRef<ScriptImportExportType>(null)
   const scriptImportOnlineRef = useRef<ScriptImportOnlineType>(null)
+  const sourceLibraryRef = useRef<SourceLibraryType>(null)
 
   const importTypes = useMemo(() => {
     return [
       { action: 'local', label: t('user_api_btn_import_local') },
       { action: 'online', label: t('user_api_btn_import_online') },
+      { action: 'library', label: t('source_library_import') },
     ] as const
   }, [t])
 
   type DorpDownMenuProps = _DorpDownMenuProps<typeof importTypes>
 
   const handleAction: DorpDownMenuProps['onPress'] = ({ action }) => {
+    // 音源库包含「更新」，超出上限时也要允许进入
+    if (action == 'library') {
+      sourceLibraryRef.current?.show()
+      return
+    }
+
     if (state.list.length > 20) {
       void tipDialog({
         message: t('user_api_max_tip'),
@@ -57,6 +66,7 @@ export default ({ btnStyle }: BtnProps) => {
       <Text size={14} color={theme['c-button-font']}>{t('user_api_btn_import')}</Text>
       <ScriptImportExport ref={scriptImportExportRef} />
       <ScriptImportOnline ref={scriptImportOnlineRef} />
+      <SourceLibrary ref={sourceLibraryRef} />
     </DorpDownMenu>
   )
 }
