@@ -1,14 +1,14 @@
 /**
  * 在线音源库 - 列表弹窗
  *
- * 使用 Dialog + FlatList：
- * - Dialog 给固定高度（80%），FlatList 才能正确滚动（ConfirmAlert 内 ScrollView 无高度约束，会滑不动）
- * - FlatList 虚拟化，支撑数百条源不至于卡死
+ * 容器用 ConfirmAlert（已验证可正常显示），内部列表用「固定像素高度 + FlatList」：
+ * - ConfirmAlert 的 ScrollView 只有 flexGrow:0，内容超高会被裁剪且滑不动
+ * - 给列表区一个确定的像素高度，FlatList 才能正确滚动并虚拟化
  * 不注册新导航页面，避免与上游页面注册逻辑冲突。
  */
 import { forwardRef, useCallback, useImperativeHandle, useMemo, useRef, useState } from 'react'
-import { View, TouchableOpacity, FlatList, StyleSheet, type ListRenderItemInfo } from 'react-native'
-import Dialog, { type DialogType } from '@/components/common/Dialog'
+import { View, TouchableOpacity, FlatList, StyleSheet, Dimensions, type ListRenderItemInfo } from 'react-native'
+import ConfirmAlert, { type ConfirmAlertType } from '@/components/common/ConfirmAlert'
 import Input from '@/components/common/Input'
 import Text from '@/components/common/Text'
 import { createStyle, toast } from '@/utils/tools'
@@ -22,6 +22,9 @@ export interface SourceLibraryType {
   show: () => void
 }
 
+// 列表区固定高度：屏幕高度的 48%，保证 FlatList 有确定边界
+const LIST_HEIGHT = Math.round(Dimensions.get('window').height * 0.48)
+
 const formatVersion = (version?: string) => {
   if (!version) return ''
   return /^\d/.test(version) ? `v${version}` : version
@@ -32,7 +35,8 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
   const theme = useTheme()
   useUserApiList()
 
-  const dialogRef = useRef<DialogType>(null)
+  const alertRef = useRef<ConfirmAlertType>(null)
+  const [visible, setVisible] = useState(false)
   const [loading, setLoading] = useState(false)
   const [items, setItems] = useState<SourceLibraryListItem[]>([])
   const [error, setError] = useState('')
@@ -59,7 +63,14 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
 
   useImperativeHandle(ref, () => ({
     show() {
-      dialogRef.current?.setVisible(true)
+      if (visible) {
+        alertRef.current?.setVisible(true)
+      } else {
+        setVisible(true)
+        requestAnimationFrame(() => {
+          alertRef.current?.setVisible(true)
+        })
+      }
       void load()
     },
   }))
@@ -82,7 +93,6 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
     }
   }
 
-  // 可用的排前面，失效的沉底；同名关键词过滤
   const filtered = useMemo(() => {
     const kw = keyword.trim().toLowerCase()
     const list = kw
@@ -147,61 +157,58 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
   }
 
   return (
-    <Dialog ref={dialogRef} title={`${t('source_library')}  ${display.length}/${items.length}`} height="80%">
-      <View style={styles.body}>
-        <View style={styles.toolbar}>
-          <Input
-            value={keyword}
-            onChangeText={setKeyword}
-            placeholder={t('source_library_search')}
-            style={{ ...styles.search, backgroundColor: theme['c-primary-input-background'] }}
-            size={13}
-          />
-          <TouchableOpacity
-            style={styles.toggle}
-            onPress={() => { setShowAll(v => !v) }}
-          >
-            <Text size={12} color={theme['c-button-font']}>
-              {showAll ? t('source_library_unique_only') : t('source_library_all_versions')}
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.refresh} disabled={loading} onPress={() => { void load(true) }}>
-            <Text size={12} color={theme['c-button-font']}>
-              {loading ? t('source_library_loading') : t('source_library_refresh')}
-            </Text>
-          </TouchableOpacity>
-        </View>
-        {error ? <Text size={12} color={theme['c-font-label']} style={styles.notice}>{error}</Text> : null}
-        {notice ? <Text size={11} color={theme['c-font-label']} style={styles.notice} numberOfLines={2}>{notice}</Text> : null}
-        <FlatList
-          data={display}
-          renderItem={renderItem}
-          keyExtractor={item => item.id}
-          style={styles.list}
-          contentContainerStyle={styles.listContent}
-          keyboardShouldPersistTaps="handled"
-          initialNumToRender={12}
-          maxToRenderPerBatch={12}
-          windowSize={7}
-          removeClippedSubviews
-          ListEmptyComponent={
-            <Text size={13} color={theme['c-font-label']} style={styles.empty}>
-              {loading ? t('loading') : t('source_library_empty')}
-            </Text>
-          }
-        />
-      </View>
-    </Dialog>
-  )
+    visible
+      ? <ConfirmAlert
+          ref={alertRef}
+          showConfirm={false}
+          title={`${t('source_library')}  ${display.length}/${items.length}`}
+          cancelText={t('close')}
+          onHide={() => { setVisible(false) }}
+        >
+          <View style={styles.toolbar}>
+            <Input
+              value={keyword}
+              onChangeText={setKeyword}
+              placeholder={t('source_library_search')}
+              style={{ ...styles.search, backgroundColor: theme['c-primary-input-background'] }}
+              size={13}
+            />
+            <TouchableOpacity style={styles.toggle} onPress={() => { setShowAll(v => !v) }}>
+              <Text size={12} color={theme['c-button-font']}>
+                {showAll ? t('source_library_unique_only') : t('source_library_all_versions')}
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.refresh} disabled={loading} onPress={() => { void load(true) }}>
+              <Text size={12} color={theme['c-button-font']}>
+                {loading ? t('source_library_loading') : t('source_library_refresh')}
+              </Text>
+            </TouchableOpacity>
+          </View>
+          {error ? <Text size={12} color={theme['c-font-label']} style={styles.notice}>{error}</Text> : null}
+          {notice ? <Text size={11} color={theme['c-font-label']} style={styles.notice} numberOfLines={2}>{notice}</Text> : null}
+          <View style={{ height: LIST_HEIGHT }}>
+            <FlatList
+              data={display}
+              renderItem={renderItem}
+              keyExtractor={item => item.id}
+              style={styles.list}
+              contentContainerStyle={styles.listContent}
+              keyboardShouldPersistTaps="handled"
+              initialNumToRender={12}
+              maxToRenderPerBatch={12}
+              windowSize={7}
+              ListEmptyComponent={
+                <Text size={13} color={theme['c-font-label']} style={styles.empty}>
+                  {loading ? t('loading') : t('source_library_empty')}
+                </Text>
+              }
+            />
+          </View>
+        </ConfirmAlert>
+      : null
 })
 
 const styles = createStyle({
-  body: {
-    flex: 1,
-    paddingTop: 6,
-    paddingLeft: 10,
-    paddingRight: 10,
-  },
   toolbar: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -226,8 +233,8 @@ const styles = createStyle({
   },
   refresh: {
     marginLeft: 6,
-    paddingLeft: 10,
-    paddingRight: 10,
+    paddingLeft: 8,
+    paddingRight: 8,
     paddingTop: 6,
     paddingBottom: 6,
     borderRadius: 4,
@@ -240,7 +247,7 @@ const styles = createStyle({
     flex: 1,
   },
   listContent: {
-    paddingBottom: 14,
+    paddingBottom: 8,
   },
   empty: {
     paddingTop: 30,
