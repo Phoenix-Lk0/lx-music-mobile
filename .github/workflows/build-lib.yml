@@ -20,6 +20,9 @@ jobs:
       - name: Setup Env
         uses: ./.github/actions/setup
 
+      - name: Syntax check
+        run: node .github/scripts/check_syntax.js
+
       - name: Build Packages
         env:
           DISABLE_SVG: 1

@@ -206,6 +206,7 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
           </View>
         </ConfirmAlert>
       : null
+  )
 })
 
 const styles = createStyle({
