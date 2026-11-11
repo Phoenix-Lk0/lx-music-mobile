@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-11T15:00:00Z",
-  "notice": "以下音源均已在本机实测可用（初始化成功且能取到播放地址）；脚本托在于本仓库内，镜像与源站失效不影响下载。",
+  "updatedAt": "2026-11-11T15:54:46Z",
+  "notice": "自带 13 条自托管源 + 17 条 pdone 第三方源，共 30 条",
   "sources": [
     {
       "id": "quandouyao-v3.0.0-tss",
@@ -248,6 +248,227 @@
         "128k",
         "320k",
         "flac"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "pd-changqing",
+      "name": "长青SVIP音源",
+      "author": "SVIP",
+      "description": "音源更新，关注微信公众号: 元力菌",
+      "version": "1.3.0",
+      "scriptUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/changqing/latest.js",
+      "homepage": "微信公众号: 元力菌",
+      "tags": [
+        "第三方"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "pd-feichangdao",
+      "name": "非常刀",
+      "author": "群主要进去",
+      "description": "聚合音源，进群链接 https://t.me/gydjlfk",
+      "version": "v5",
+      "scriptUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/feichangdao/latest.js",
+      "homepage": "https://github.com/pdone/lx-music-source",
+      "tags": [
+        "第三方"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "pd-fish",
+      "name": "fish_music",
+      "author": "大鱼吃小鱼",
+      "description": "交流群组:https://t.me/yus_share",
+      "version": "1.9.0",
+      "scriptUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/fish/latest.js",
+      "homepage": "https://github.com/lyswhut/lx-music-desktop",
+      "tags": [
+        "第三方"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "pd-flower",
+      "name": "野花🌷",
+      "author": "",
+      "description": "",
+      "version": "1",
+      "scriptUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/flower/latest.js",
+      "homepage": "https://github.com/pdone/lx-music-source",
+      "tags": [
+        "第三方"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "pd-grass",
+      "name": "野草🌾",
+      "author": "",
+      "description": "",
+      "version": "1",
+      "scriptUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/grass/latest.js",
+      "homepage": "https://github.com/pdone/lx-music-source",
+      "tags": [
+        "第三方"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "pd-helloworld",
+      "name": "𝖧౿ᥣᥣ𝗈 Ԝ𝗈𝗋ᥣᑯ",
+      "author": "hello world",
+      "description": "每天都要开心哦,无论如何...",
+      "version": "260925",
+      "scriptUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/helloworld/latest.js",
+      "homepage": "https://github.com/pdone/lx-music-source",
+      "tags": [
+        "第三方"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "pd-huanyin",
+      "name": "幻音音源",
+      "author": "竹佀",
+      "description": "",
+      "version": "v3",
+      "scriptUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/huanyin/latest.js",
+      "homepage": "https://github.com/pdone/lx-music-source",
+      "tags": [
+        "第三方"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "pd-huibq",
+      "name": "Huibq_lxmusic源",
+      "author": "Huibq",
+      "description": "Github搜索“洛雪音乐音源”，禁止批量下载！",
+      "version": "v1.2.0",
+      "scriptUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/huibq/latest.js",
+      "homepage": "https://github.com/pdone/lx-music-source",
+      "tags": [
+        "第三方"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "pd-hyw",
+      "name": "HYWmusic_公益版",
+      "author": "Ryn",
+      "description": "qq群：1094095648；965503129",
+      "version": "v1.2.0",
+      "scriptUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/hyw/latest.js",
+      "homepage": "https://github.com/Macrohard0001/HYWmusic_source",
+      "tags": [
+        "第三方"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "pd-ikun",
+      "name": "ikun音源",
+      "author": "ikunshare",
+      "description": "* @version v22",
+      "version": "v22",
+      "scriptUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/ikun/latest.js",
+      "homepage": "https://github.com/pdone/lx-music-source",
+      "tags": [
+        "第三方"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "pd-jiexiang",
+      "name": "杰翔聚合音源",
+      "author": "https://qm.qq.com/cgi-bin/qm/qr?k=dEBGYbmu1lIRp7bAgHFim0W1uDsYl9v5&jump_from=webapi&authKey=fmTG96MhfqDQ5KARA/OvnuWAigCAloClvYhtSiEQd0jQneXmGons54BwlAh1+bUi",
+      "description": "全平台支持flac，wy，qq，kw，kg支持母带",
+      "version": "2.3.0",
+      "scriptUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/jiexiang/latest.js",
+      "homepage": "https://github.com/haonanren118/jiexiang-Music-Source",
+      "tags": [
+        "第三方"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "pd-lx",
+      "name": "独家音源",
+      "author": "w",
+      "description": "后续更新，请关注微信公众号: 洛雪科技",
+      "version": "7",
+      "scriptUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js",
+      "homepage": "https://github.com/pdone/lx-music-source",
+      "tags": [
+        "第三方"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "pd-qingliang",
+      "name": "轻量音源（四平台多源并行）",
+      "author": "本地定制",
+      "description": "QQ/网易/酷狗/酷我多线路并发取链，谁先通过音频头校验用谁；含超时取消与冷却。",
+      "version": "2.1.0",
+      "scriptUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/qingliang/latest.js",
+      "homepage": "https://github.com/pdone/lx-music-source",
+      "tags": [
+        "第三方"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "pd-sixyin",
+      "name": "六音音源",
+      "author": "六音",
+      "description": "v1.2.1 如失效请前往 www.sixyin.com 下载最新版本",
+      "version": "v1.2.1",
+      "scriptUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/sixyin/latest.js",
+      "homepage": "www.sixyin.com",
+      "tags": [
+        "第三方"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "pd-xinghai",
+      "name": "星海音乐源",
+      "author": "万去了了 / 科学大魔王",
+      "description": "GDAPI | 聚合 | ChKSz API | 全平台支持 24bit FLAC，网易、酷狗、QQ 最高支持母带｜建议与反馈：https://yy.zddyr.top/survey.php?k=192ee708d4721bc9077f8f1738296c1b",
+      "version": "v3.2.18",
+      "scriptUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/xinghai/latest.js",
+      "homepage": "https://zddyr.top/",
+      "tags": [
+        "第三方"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "pd-xinglan",
+      "name": "星澜聚合音源 (StellarWave)",
+      "author": "星澜团队",
+      "description": "星澜 v4.0.2 与墨澜 v2.3.6 融合版：落月 QQ 主线路 + 云记（海堂）/HYWmusic/星海/念心等备用后端，支持母带/全景声/汽水音乐",
+      "version": "v4.0.2",
+      "scriptUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/xinglan/latest.js",
+      "homepage": "https://github.com/your-repo/StellarWave",
+      "tags": [
+        "第三方"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "pd-yuningxi",
+      "name": "lx-玉宁熙-Pro",
+      "author": "ynx(2363768762)",
+      "description": "禁止批量下载 2秒内最多4次请求",
+      "version": "v1.2.5",
+      "scriptUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/yuningxi/latest.js",
+      "homepage": "https://github.com/pdone/lx-music-source",
+      "tags": [
+        "第三方"
       ],
       "status": "ok"
     }
