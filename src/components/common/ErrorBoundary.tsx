@@ -3,7 +3,7 @@
  * 同时写入 App 缓存目录的 error.log（release 版也生效），便于取证。
  */
 import { Component, type ErrorInfo, type ReactNode } from 'react'
-import { View } from 'react-native'
+import { View, Alert } from 'react-native'
 import Text from '@/components/common/Text'
 import { toast } from '@/utils/tools'
 import { log } from '@/utils/log'
@@ -33,7 +33,10 @@ export default class ErrorBoundary extends Component<Props, State> {
       `componentStack: ${info?.componentStack ?? ''}`,
     ].join('\n')
     log.error(detail)
-    toast(`${this.props.label ?? ''}渲染失败：${error?.message ?? 'unknown'}`, 'long')
+    const msg = `${error?.name ?? 'Error'}: ${error?.message ?? 'unknown'}\n\n${String(error?.stack ?? '').slice(0, 600)}`
+    toast(`${this.props.label ?? ''}渲染失败`, 'long')
+    // 系统对话框不会被 toast 截断，便于直接截图取证
+    Alert.alert(`${this.props.label ?? ''}渲染错误`, msg)
   }
 
   render() {
