@@ -6,6 +6,9 @@ on:
       - feat/source-library
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   android:
     name: Android
@@ -24,7 +27,7 @@ jobs:
         run: |
           cd android
           echo ${{ secrets.KEYSTORE_STORE_FILE_BASE64 }} | base64 --decode > app/${{ secrets.KEYSTORE_STORE_FILE }}
-          ./gradlew assembleRelease -PMYAPP_UPLOAD_STORE_FILE='${{ secrets.KEYSTORE_STORE_FILE }}' -PMYAPP_UPLOAD_KEY_ALIAS='${{ secrets.KEYSTORE_KEY_ALIAS }}' -PMYAPP_UPLOAD_STORE_PASSWORD='${{ secrets.KEYSTORE_PASSWORD }}' -PMYAPP_UPLOAD_KEY_PASSWORD='${{ secrets.KEYSTORE_KEY_PASSWORD }}'
+          ./gradlew assembleRelease -PreactNativeArchitectures=arm64-v8a -PMYAPP_UPLOAD_STORE_FILE='${{ secrets.KEYSTORE_STORE_FILE }}' -PMYAPP_UPLOAD_KEY_ALIAS='${{ secrets.KEYSTORE_KEY_ALIAS }}' -PMYAPP_UPLOAD_STORE_PASSWORD='${{ secrets.KEYSTORE_PASSWORD }}' -PMYAPP_UPLOAD_KEY_PASSWORD='${{ secrets.KEYSTORE_KEY_PASSWORD }}'
           rm -f app/${{ secrets.KEYSTORE_STORE_FILE }}
 
       - name: Generate file MD5
@@ -38,3 +41,15 @@ jobs:
           name: lx-music-lib-${{ github.run_number }}
           path: android/app/build/outputs/apk/release/*.apk
           if-no-files-found: error
+
+      # Release 附件走公开链接，便于国内镜像（gh-proxy 等）加速下载
+      - name: Publish Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: lib-b${{ github.run_number }}
+          name: Lib Edition build ${{ github.run_number }}
+          body: |
+            音源库版构建产物（arm64-v8a）
+            基线：${{ github.sha }}
+          files: android/app/build/outputs/apk/release/*.apk
+          fail_on_unmatched_files: true
