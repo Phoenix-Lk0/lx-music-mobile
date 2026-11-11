@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-11T15:54:46Z",
-  "notice": "自带 13 条自托管源 + 17 条 pdone 第三方源，共 30 条",
+  "updatedAt": "2026-11-11T15:59:57Z",
+  "notice": "共 30 条：13 条自托管 + 17 条第三方（均带镜像，主地址失效自动回退）",
   "sources": [
     {
       "id": "quandouyao-v3.0.0-tss",
@@ -262,7 +262,9 @@
       "tags": [
         "第三方"
       ],
-      "status": "ok"
+      "status": "ok",
+      "mirrorUrl": "https://raw.githubusercontent.com/Phoenix-Lk0/lx-music-mobile/main/library/scripts/mirror/pd-changqing.js",
+      "originUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/changqing/latest.js"
     },
     {
       "id": "pd-feichangdao",
@@ -275,7 +277,9 @@
       "tags": [
         "第三方"
       ],
-      "status": "ok"
+      "status": "ok",
+      "mirrorUrl": "https://raw.githubusercontent.com/Phoenix-Lk0/lx-music-mobile/main/library/scripts/mirror/pd-feichangdao.js",
+      "originUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/feichangdao/latest.js"
     },
     {
       "id": "pd-fish",
@@ -288,7 +292,9 @@
       "tags": [
         "第三方"
       ],
-      "status": "ok"
+      "status": "ok",
+      "mirrorUrl": "https://raw.githubusercontent.com/Phoenix-Lk0/lx-music-mobile/main/library/scripts/mirror/pd-fish.js",
+      "originUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/fish/latest.js"
     },
     {
       "id": "pd-flower",
@@ -301,7 +307,9 @@
       "tags": [
         "第三方"
       ],
-      "status": "ok"
+      "status": "ok",
+      "mirrorUrl": "https://raw.githubusercontent.com/Phoenix-Lk0/lx-music-mobile/main/library/scripts/mirror/pd-flower.js",
+      "originUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/flower/latest.js"
     },
     {
       "id": "pd-grass",
@@ -314,7 +322,9 @@
       "tags": [
         "第三方"
       ],
-      "status": "ok"
+      "status": "ok",
+      "mirrorUrl": "https://raw.githubusercontent.com/Phoenix-Lk0/lx-music-mobile/main/library/scripts/mirror/pd-grass.js",
+      "originUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/grass/latest.js"
     },
     {
       "id": "pd-helloworld",
@@ -327,7 +337,9 @@
       "tags": [
         "第三方"
       ],
-      "status": "ok"
+      "status": "ok",
+      "mirrorUrl": "https://raw.githubusercontent.com/Phoenix-Lk0/lx-music-mobile/main/library/scripts/mirror/pd-helloworld.js",
+      "originUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/helloworld/latest.js"
     },
     {
       "id": "pd-huanyin",
@@ -340,7 +352,9 @@
       "tags": [
         "第三方"
       ],
-      "status": "ok"
+      "status": "ok",
+      "mirrorUrl": "https://raw.githubusercontent.com/Phoenix-Lk0/lx-music-mobile/main/library/scripts/mirror/pd-huanyin.js",
+      "originUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/huanyin/latest.js"
     },
     {
       "id": "pd-huibq",
@@ -353,7 +367,9 @@
       "tags": [
         "第三方"
       ],
-      "status": "ok"
+      "status": "ok",
+      "mirrorUrl": "https://raw.githubusercontent.com/Phoenix-Lk0/lx-music-mobile/main/library/scripts/mirror/pd-huibq.js",
+      "originUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/huibq/latest.js"
     },
     {
       "id": "pd-hyw",
@@ -366,7 +382,9 @@
       "tags": [
         "第三方"
       ],
-      "status": "ok"
+      "status": "ok",
+      "mirrorUrl": "https://raw.githubusercontent.com/Phoenix-Lk0/lx-music-mobile/main/library/scripts/mirror/pd-hyw.js",
+      "originUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/hyw/latest.js"
     },
     {
       "id": "pd-ikun",
@@ -379,7 +397,9 @@
       "tags": [
         "第三方"
       ],
-      "status": "ok"
+      "status": "ok",
+      "mirrorUrl": "https://raw.githubusercontent.com/Phoenix-Lk0/lx-music-mobile/main/library/scripts/mirror/pd-ikun.js",
+      "originUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/ikun/latest.js"
     },
     {
       "id": "pd-jiexiang",
@@ -392,7 +412,9 @@
       "tags": [
         "第三方"
       ],
-      "status": "ok"
+      "status": "ok",
+      "mirrorUrl": "https://raw.githubusercontent.com/Phoenix-Lk0/lx-music-mobile/main/library/scripts/mirror/pd-jiexiang.js",
+      "originUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/jiexiang/latest.js"
     },
     {
       "id": "pd-lx",
@@ -405,7 +427,9 @@
       "tags": [
         "第三方"
       ],
-      "status": "ok"
+      "status": "ok",
+      "mirrorUrl": "https://raw.githubusercontent.com/Phoenix-Lk0/lx-music-mobile/main/library/scripts/mirror/pd-lx.js",
+      "originUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js"
     },
     {
       "id": "pd-qingliang",
@@ -418,7 +442,9 @@
       "tags": [
         "第三方"
       ],
-      "status": "ok"
+      "status": "ok",
+      "mirrorUrl": "https://raw.githubusercontent.com/Phoenix-Lk0/lx-music-mobile/main/library/scripts/mirror/pd-qingliang.js",
+      "originUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/qingliang/latest.js"
     },
     {
       "id": "pd-sixyin",
@@ -431,7 +457,9 @@
       "tags": [
         "第三方"
       ],
-      "status": "ok"
+      "status": "ok",
+      "mirrorUrl": "https://raw.githubusercontent.com/Phoenix-Lk0/lx-music-mobile/main/library/scripts/mirror/pd-sixyin.js",
+      "originUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/sixyin/latest.js"
     },
     {
       "id": "pd-xinghai",
@@ -444,7 +472,9 @@
       "tags": [
         "第三方"
       ],
-      "status": "ok"
+      "status": "ok",
+      "mirrorUrl": "https://raw.githubusercontent.com/Phoenix-Lk0/lx-music-mobile/main/library/scripts/mirror/pd-xinghai.js",
+      "originUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/xinghai/latest.js"
     },
     {
       "id": "pd-xinglan",
@@ -457,7 +487,9 @@
       "tags": [
         "第三方"
       ],
-      "status": "ok"
+      "status": "ok",
+      "mirrorUrl": "https://raw.githubusercontent.com/Phoenix-Lk0/lx-music-mobile/main/library/scripts/mirror/pd-xinglan.js",
+      "originUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/xinglan/latest.js"
     },
     {
       "id": "pd-yuningxi",
@@ -470,7 +502,9 @@
       "tags": [
         "第三方"
       ],
-      "status": "ok"
+      "status": "ok",
+      "mirrorUrl": "https://raw.githubusercontent.com/Phoenix-Lk0/lx-music-mobile/main/library/scripts/mirror/pd-yuningxi.js",
+      "originUrl": "https://raw.githubusercontent.com/pdone/lx-music-source/main/yuningxi/latest.js"
     }
   ]
 }

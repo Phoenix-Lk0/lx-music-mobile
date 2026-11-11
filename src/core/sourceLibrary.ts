@@ -282,23 +282,43 @@ export const buildList = async(index: SourceLibraryIndex, records?: InstallRecor
   })
 }
 
-const downloadScript = async(item: SourceLibraryItem): Promise<string> => {
-  const resp = await httpFetch(item.scriptUrl, { timeout: 20000 }).promise
+const fetchScriptOnce = async(url: string): Promise<string> => {
+  const resp = await httpFetch(url, { timeout: 20000 }).promise
   if (resp.statusCode >= 400) throw new Error(`HTTP ${resp.statusCode}`)
   const script = typeof resp.body === 'string' ? resp.body : JSON.stringify(resp.body)
   if (!script.length) throw new Error('Empty script')
-  if (script.length > SOURCE_LIBRARY_MAX_SCRIPT_SIZE) throw new Error(global.i18n.t('source_library_too_large'))
+  return script
+}
 
-  if (item.size && Math.abs(script.length - item.size) > 2048) {
-    throw new Error(global.i18n.t('source_library_size_mismatch'))
-  }
-  if (item.sha256 && script.length <= SOURCE_LIBRARY_HASH_LIMIT) {
-    const hash = sha256Hex(script)
-    if (hash.toLowerCase() !== item.sha256.trim().toLowerCase()) {
-      throw new Error(global.i18n.t('source_library_hash_mismatch'))
+/**
+ * 依次尝试主地址与镜像地址，任一成功即返回。
+ * 动态源（latest.js）不写 sha256/size，故校验只对固定脚本生效。
+ */
+const downloadScript = async(item: SourceLibraryItem): Promise<string> => {
+  const urls = [item.scriptUrl]
+  if (item.mirrorUrl && item.mirrorUrl !== item.scriptUrl) urls.push(item.mirrorUrl)
+
+  let lastError: Error | undefined
+  for (const url of urls) {
+    try {
+      const script = await fetchScriptOnce(url)
+      if (script.length > SOURCE_LIBRARY_MAX_SCRIPT_SIZE) throw new Error(global.i18n.t('source_library_too_large'))
+      if (item.size && Math.abs(script.length - item.size) > 2048) {
+        throw new Error(global.i18n.t('source_library_size_mismatch'))
+      }
+      if (item.sha256 && script.length <= SOURCE_LIBRARY_HASH_LIMIT) {
+        const hash = sha256Hex(script)
+        if (hash.toLowerCase() !== item.sha256.trim().toLowerCase()) {
+          throw new Error(global.i18n.t('source_library_hash_mismatch'))
+        }
+      }
+      return script
+    } catch (err: any) {
+      lastError = err
+      console.log('[sourceLibrary] download failed:', url, err?.message)
     }
   }
-  return script
+  throw lastError ?? new Error('Download failed')
 }
 
 /**

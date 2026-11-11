@@ -42,6 +42,8 @@ export interface SourceLibraryItem {
   description?: string
   version?: string
   scriptUrl: string
+  /** 可选镜像地址：主地址失效时客户端自动回退 */
+  mirrorUrl?: string
   sha256?: string
   size?: number
   homepage?: string
