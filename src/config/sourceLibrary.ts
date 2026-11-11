@@ -50,6 +50,8 @@ export interface SourceLibraryItem {
   tags?: string[]
   quality?: string[]
   status?: 'ok' | 'degraded' | 'dead'
+  /** 健康检查自动切换到镜像的日期 */
+  failedOver?: string
 }
 
 export interface SourceLibraryIndex {

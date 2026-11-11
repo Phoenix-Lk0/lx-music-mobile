@@ -1,12 +1,15 @@
 /**
  * 在线音源库 - 列表弹窗
  *
- * 复用 ConfirmAlert 作为容器，不引入新的导航页面，
- * 因此不会与上游任何页面注册逻辑产生冲突。
+ * 使用 Dialog + FlatList：
+ * - Dialog 给固定高度（80%），FlatList 才能正确滚动（ConfirmAlert 内 ScrollView 无高度约束，会滑不动）
+ * - FlatList 虚拟化，支撑数百条源不至于卡死
+ * 不注册新导航页面，避免与上游页面注册逻辑冲突。
  */
-import { forwardRef, useCallback, useImperativeHandle, useRef, useState } from 'react'
-import { View, TouchableOpacity, StyleSheet } from 'react-native'
-import ConfirmAlert, { type ConfirmAlertType } from '@/components/common/ConfirmAlert'
+import { forwardRef, useCallback, useImperativeHandle, useMemo, useRef, useState } from 'react'
+import { View, TouchableOpacity, FlatList, StyleSheet, type ListRenderItemInfo } from 'react-native'
+import Dialog, { type DialogType } from '@/components/common/Dialog'
+import Input from '@/components/common/Input'
 import Text from '@/components/common/Text'
 import { createStyle, toast } from '@/utils/tools'
 import { useTheme } from '@/store/theme/hook'
@@ -29,20 +32,21 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
   const theme = useTheme()
   useUserApiList()
 
-  const alertRef = useRef<ConfirmAlertType>(null)
-  const [visible, setVisible] = useState(false)
+  const dialogRef = useRef<DialogType>(null)
   const [loading, setLoading] = useState(false)
   const [items, setItems] = useState<SourceLibraryListItem[]>([])
   const [error, setError] = useState('')
   const [notice, setNotice] = useState('')
   const [busyId, setBusyId] = useState('')
+  const [keyword, setKeyword] = useState('')
+  const [showAll, setShowAll] = useState(false)
 
   const load = useCallback(async(force = false) => {
     setLoading(true)
     setError('')
     try {
       const { index, fromCache } = await fetchSourceLibraryIndex(force)
-      setItems(await buildList(index))
+      setItems(buildList(index))
       setNotice(index.notice ?? '')
       if (fromCache) setError(t('source_library_offline_cache'))
     } catch (err: any) {
@@ -55,14 +59,7 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
 
   useImperativeHandle(ref, () => ({
     show() {
-      if (visible) {
-        alertRef.current?.setVisible(true)
-      } else {
-        setVisible(true)
-        requestAnimationFrame(() => {
-          alertRef.current?.setVisible(true)
-        })
-      }
+      dialogRef.current?.setVisible(true)
       void load()
     },
   }))
@@ -85,7 +82,31 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
     }
   }
 
-  const renderItem = (item: SourceLibraryListItem) => {
+  // 可用的排前面，失效的沉底；同名关键词过滤
+  const filtered = useMemo(() => {
+    const kw = keyword.trim().toLowerCase()
+    const list = kw
+      ? items.filter(i => (i.name + (i.author ?? '') + (i.description ?? '')).toLowerCase().includes(kw))
+      : items
+    return [...list].sort((a, b) => {
+      const rank = (x: SourceLibraryListItem) => (x.status == 'dead' ? 2 : x.state == 'installed' ? 1 : 0)
+      return rank(a) - rank(b)
+    })
+  }, [items, keyword])
+
+  // 默认每个音源只显示最新版，避免同名多版本刷屏
+  const display = useMemo(() => {
+    if (showAll) return filtered
+    const seen = new Set<string>()
+    return filtered.filter(item => {
+      const key = item.name.trim().toLowerCase()
+      if (seen.has(key)) return false
+      seen.add(key)
+      return true
+    })
+  }, [filtered, showAll])
+
+  const renderItem = ({ item }: ListRenderItemInfo<SourceLibraryListItem>) => {
     const busy = busyId == item.id
     const installed = item.state == 'installed'
     const outdated = item.state == 'outdated'
@@ -99,17 +120,15 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
           : t('source_library_install')
 
     return (
-      <View style={styles.item} key={item.id}>
+      <View style={styles.item}>
         <View style={styles.itemInfo}>
-          <Text size={15}>
+          <Text size={15} numberOfLines={1}>
             {item.name}
             {item.version ? <Text size={12} color={theme['c-font-label']}>{ '  ' + formatVersion(item.version) }</Text> : null}
             {item.author ? <Text size={12} color={theme['c-font-label']}>{ '  ' + item.author }</Text> : null}
           </Text>
-          {item.description ? <Text size={12} color={theme['c-font-label']} style={styles.desc}>{item.description}</Text> : null}
-          {item.localVersion && outdated
-            ? <Text size={12} color={theme['c-font-label']}>{ t('source_library_local_version', { version: formatVersion(item.localVersion) }) }</Text>
-            : null}
+          {item.description ? <Text size={12} color={theme['c-font-label']} numberOfLines={2} style={styles.desc}>{item.description}</Text> : null}
+          {item.failedOver ? <Text size={11} color={theme['c-font-label']}>{t('source_library_mirror_in_use')}</Text> : null}
         </View>
         <TouchableOpacity
           style={{
@@ -128,54 +147,103 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
   }
 
   return (
-    visible
-      ? <ConfirmAlert
-          ref={alertRef}
-          showConfirm={false}
-          title={t('source_library')}
-          cancelText={t('close')}
-          onHide={() => { setVisible(false) }}
-        >
-          <View style={styles.header}>
-            <Text size={12} color={theme['c-font-label']}>
-              {loading ? t('source_library_loading') : t('source_library_count', { count: items.length })}
+    <Dialog ref={dialogRef} title={`${t('source_library')}  ${display.length}/${items.length}`} height="80%">
+      <View style={styles.body}>
+        <View style={styles.toolbar}>
+          <Input
+            value={keyword}
+            onChangeText={setKeyword}
+            placeholder={t('source_library_search')}
+            style={{ ...styles.search, backgroundColor: theme['c-primary-input-background'] }}
+            size={13}
+          />
+          <TouchableOpacity
+            style={styles.toggle}
+            onPress={() => { setShowAll(v => !v) }}
+          >
+            <Text size={12} color={theme['c-button-font']}>
+              {showAll ? t('source_library_unique_only') : t('source_library_all_versions')}
             </Text>
-            <TouchableOpacity style={styles.refresh} disabled={loading} onPress={() => { void load(true) }}>
-              <Text size={12} color={theme['c-button-font']}>{t('source_library_refresh')}</Text>
-            </TouchableOpacity>
-          </View>
-          {notice ? <Text size={12} color={theme['c-font-label']} style={styles.notice}>{notice}</Text> : null}
-          {error ? <Text size={12} color={theme['c-font-label']} style={styles.notice}>{error}</Text> : null}
-          {!loading && !items.length && !error
-            ? <Text size={13} color={theme['c-font-label']} style={styles.empty}>{t('source_library_empty')}</Text>
-            : null}
-          {items.map(renderItem)}
-        </ConfirmAlert>
-      : null
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.refresh} disabled={loading} onPress={() => { void load(true) }}>
+            <Text size={12} color={theme['c-button-font']}>
+              {loading ? t('source_library_loading') : t('source_library_refresh')}
+            </Text>
+          </TouchableOpacity>
+        </View>
+        {error ? <Text size={12} color={theme['c-font-label']} style={styles.notice}>{error}</Text> : null}
+        {notice ? <Text size={11} color={theme['c-font-label']} style={styles.notice} numberOfLines={2}>{notice}</Text> : null}
+        <FlatList
+          data={display}
+          renderItem={renderItem}
+          keyExtractor={item => item.id}
+          style={styles.list}
+          contentContainerStyle={styles.listContent}
+          keyboardShouldPersistTaps="handled"
+          initialNumToRender={12}
+          maxToRenderPerBatch={12}
+          windowSize={7}
+          removeClippedSubviews
+          ListEmptyComponent={
+            <Text size={13} color={theme['c-font-label']} style={styles.empty}>
+              {loading ? t('loading') : t('source_library_empty')}
+            </Text>
+          }
+        />
+      </View>
+    </Dialog>
   )
 })
 
 const styles = createStyle({
-  header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingBottom: 8,
-  },
-  refresh: {
+  body: {
+    flex: 1,
+    paddingTop: 6,
     paddingLeft: 10,
     paddingRight: 10,
-    paddingTop: 3,
-    paddingBottom: 3,
+  },
+  toolbar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingBottom: 6,
+  },
+  search: {
+    flex: 1,
+    height: 32,
+    borderRadius: 4,
+    paddingLeft: 8,
+    paddingRight: 8,
+    fontSize: 13,
+  },
+  toggle: {
+    marginLeft: 6,
+    paddingLeft: 8,
+    paddingRight: 8,
+    paddingTop: 6,
+    paddingBottom: 6,
+    borderRadius: 4,
+    backgroundColor: 'rgba(128,128,128,0.18)',
+  },
+  refresh: {
+    marginLeft: 6,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 6,
+    paddingBottom: 6,
     borderRadius: 4,
     backgroundColor: 'rgba(128,128,128,0.18)',
   },
   notice: {
-    paddingBottom: 6,
+    paddingBottom: 4,
+  },
+  list: {
+    flex: 1,
+  },
+  listContent: {
+    paddingBottom: 14,
   },
   empty: {
-    paddingTop: 20,
-    paddingBottom: 20,
+    paddingTop: 30,
     textAlign: 'center',
   },
   item: {

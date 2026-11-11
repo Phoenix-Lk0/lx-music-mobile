@@ -539,5 +539,9 @@
   "source_library_size_mismatch": "Script size mismatch with index",
   "source_library_too_large": "Script too large",
   "source_library_max_count": "Source limit reached ({count})",
-  "source_library_local_version": "Local {version}"
+  "source_library_local_version": "Local {version}",
+  "source_library_search": "Search name / author",
+  "source_library_mirror_in_use": "Mirror in use",
+  "source_library_all_versions": "All versions",
+  "source_library_unique_only": "Latest only"
 }

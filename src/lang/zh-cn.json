@@ -539,5 +539,9 @@
   "source_library_size_mismatch": "脚本大小与索引不符",
   "source_library_too_large": "脚本体积超过限制",
   "source_library_max_count": "自定义源已达上限（{count}）",
-  "source_library_local_version": "本地版本 {version}"
+  "source_library_local_version": "本地版本 {version}",
+  "source_library_search": "搜索音源名 / 作者",
+  "source_library_mirror_in_use": "已启用镜像地址",
+  "source_library_all_versions": "所有版本",
+  "source_library_unique_only": "仅最新版"
 }
