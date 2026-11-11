@@ -1,15 +1,16 @@
 /**
- * 在线音源库 - 列表弹窗
+ * 在线音源库 - 列表弹窗（极简稳定版）
  *
- * 布局约束（踩过的坑，勿随意改动）：
- * - 容器必须是 ConfirmAlert：它已验证可正常显示；Dialog 的百分比高度在居中容器里会算成 0 → 白屏
- * - 列表渲染必须用 map，不能用 FlatList：VirtualizedList 嵌在 ConfirmAlert 的 ScrollView 里会渲染空白
- * - 因此用分页控制单页条数，保证内容不超出弹窗可视高度，不需要滚动
+ * 设计约束（三次白屏的结论，改前务必看）：
+ * - 容器：ConfirmAlert（第 1 版验证可显示）
+ * - 渲染：纯 map，不用 FlatList（第 2、3 版白屏）
+ * - 不用 Input 搜索框（第 4 版仍白屏，怀疑是其引入）
+ * - 不用 useMemo/useEffect，只在渲染中做纯计算
+ * - 翻页用最简单的方式控制单页条数，保证内容不超高
  */
-import { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react'
+import { forwardRef, useCallback, useImperativeHandle, useRef, useState } from 'react'
 import { View, TouchableOpacity, StyleSheet } from 'react-native'
 import ConfirmAlert, { type ConfirmAlertType } from '@/components/common/ConfirmAlert'
-import Input from '@/components/common/Input'
 import Text from '@/components/common/Text'
 import { createStyle, toast } from '@/utils/tools'
 import { useTheme } from '@/store/theme/hook'
@@ -22,8 +23,7 @@ export interface SourceLibraryType {
   show: () => void
 }
 
-// 单页条数：10 条 × 约 64px ≈ 640px，稳定落在弹窗可视区内
-const PAGE_SIZE = 10
+const PAGE_SIZE = 12
 
 const formatVersion = (version?: string) => {
   if (!version) return ''
@@ -40,9 +40,7 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
   const [loading, setLoading] = useState(false)
   const [items, setItems] = useState<SourceLibraryListItem[]>([])
   const [error, setError] = useState('')
-  const [notice, setNotice] = useState('')
   const [busyId, setBusyId] = useState('')
-  const [keyword, setKeyword] = useState('')
   const [showAll, setShowAll] = useState(false)
   const [page, setPage] = useState(0)
 
@@ -52,7 +50,6 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
     try {
       const { index, fromCache } = await fetchSourceLibraryIndex(force)
       setItems(buildList(index))
-      setNotice(index.notice ?? '')
       if (fromCache) setError(t('source_library_offline_cache'))
     } catch (err: any) {
       setItems([])
@@ -79,10 +76,6 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
 
   const handleInstall = async(item: SourceLibraryListItem) => {
     if (busyId) return
-    if (item.status == 'dead') {
-      toast(t('source_library_dead_tip'), 'long')
-      return
-    }
     setBusyId(item.id)
     try {
       await installItem(item)
@@ -95,36 +88,21 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
     }
   }
 
-  const filtered = useMemo(() => {
-    const kw = keyword.trim().toLowerCase()
-    const list = kw
-      ? items.filter(i => (i.name + (i.author ?? '') + (i.description ?? '')).toLowerCase().includes(kw))
-      : items
-    return [...list].sort((a, b) => {
-      const rank = (x: SourceLibraryListItem) => (x.status == 'dead' ? 2 : x.state == 'installed' ? 1 : 0)
-      return rank(a) - rank(b)
-    })
-  }, [items, keyword])
-
-  // 默认每个音源只显示最新版，避免同名多版本刷屏
-  const display = useMemo(() => {
-    if (showAll) return filtered
-    const seen = new Set<string>()
-    return filtered.filter(item => {
-      const key = item.name.trim().toLowerCase()
-      if (seen.has(key)) return false
-      seen.add(key)
+  // 纯计算：同源只留第一项（数据已按版本降序排好）
+  let list = items
+  if (!showAll) {
+    const seen: Record<string, true> = {}
+    list = items.filter(item => {
+      const key = String(item.name ?? '').trim().toLowerCase()
+      if (seen[key]) return false
+      seen[key] = true
       return true
     })
-  }, [filtered, showAll])
+  }
 
-  const pageCount = Math.max(1, Math.ceil(display.length / PAGE_SIZE))
+  const pageCount = Math.max(1, Math.ceil(list.length / PAGE_SIZE))
   const currentPage = Math.min(page, pageCount - 1)
-  const pageItems = display.slice(currentPage * PAGE_SIZE, currentPage * PAGE_SIZE + PAGE_SIZE)
-
-  useEffect(() => {
-    setPage(0)
-  }, [keyword, showAll])
+  const pageItems = list.slice(currentPage * PAGE_SIZE, currentPage * PAGE_SIZE + PAGE_SIZE)
 
   const renderItem = (item: SourceLibraryListItem) => {
     const busy = busyId == item.id
@@ -145,8 +123,9 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
           <Text size={15} numberOfLines={1}>
             {item.name}
             {item.version ? <Text size={12} color={theme['c-font-label']}>{ '  ' + formatVersion(item.version) }</Text> : null}
+            {item.author ? <Text size={12} color={theme['c-font-label']}>{ '  ' + item.author }</Text> : null}
           </Text>
-          {item.author ? <Text size={12} color={theme['c-font-label']} numberOfLines={1}>{item.author}</Text> : null}
+          {item.description ? <Text size={12} color={theme['c-font-label']} numberOfLines={1}>{item.description}</Text> : null}
         </View>
         <TouchableOpacity
           style={{
@@ -169,48 +148,36 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
       ? <ConfirmAlert
           ref={alertRef}
           showConfirm={false}
-          title={`${t('source_library')}  ${display.length}`}
+          title={`${t('source_library')} ${list.length}`}
           cancelText={t('close')}
           onHide={() => { setVisible(false) }}
         >
-          <View style={styles.toolbar}>
-            <Input
-              value={keyword}
-              onChangeText={setKeyword}
-              placeholder={t('source_library_search')}
-              style={{ ...styles.search, backgroundColor: theme['c-primary-input-background'] }}
-              size={13}
-            />
+          <View style={styles.bar}>
+            <TouchableOpacity style={styles.smallBtn} onPress={() => { setShowAll(v => !v); setPage(0) }}>
+              <Text size={12} color={theme['c-button-font']}>
+                {showAll ? t('source_library_unique_only') : t('source_library_all_versions')}
+              </Text>
+            </TouchableOpacity>
             <TouchableOpacity style={styles.smallBtn} onPress={() => { void load(true) }}>
               <Text size={12} color={theme['c-button-font']}>
                 {loading ? t('source_library_loading') : t('source_library_refresh')}
               </Text>
             </TouchableOpacity>
-          </View>
-          <View style={styles.toolbar}>
-            <TouchableOpacity style={styles.smallBtn} onPress={() => { setShowAll(v => !v) }}>
-              <Text size={12} color={theme['c-button-font']}>
-                {showAll ? t('source_library_unique_only') : t('source_library_all_versions')}
-              </Text>
-            </TouchableOpacity>
             <TouchableOpacity
               style={styles.smallBtn}
-              disabled={currentPage <= 0}
-              onPress={() => { setPage(p => Math.max(0, p - 1)) }}
+              onPress={() => { setPage(Math.max(0, currentPage - 1)) }}
             >
               <Text size={12} color={theme['c-button-font']}>{t('source_library_prev')}</Text>
             </TouchableOpacity>
-            <Text size={12} color={theme['c-font-label']}>{` ${currentPage + 1}/${pageCount} `}</Text>
+            <Text size={12} color={theme['c-font-label']}>{`${currentPage + 1}/${pageCount}`}</Text>
             <TouchableOpacity
               style={styles.smallBtn}
-              disabled={currentPage >= pageCount - 1}
-              onPress={() => { setPage(p => Math.min(pageCount - 1, p + 1)) }}
+              onPress={() => { setPage(Math.min(pageCount - 1, currentPage + 1)) }}
             >
               <Text size={12} color={theme['c-button-font']}>{t('source_library_next')}</Text>
             </TouchableOpacity>
           </View>
-          {error ? <Text size={12} color={theme['c-font-label']} style={styles.notice}>{error}</Text> : null}
-          {notice ? <Text size={11} color={theme['c-font-label']} style={styles.notice} numberOfLines={2}>{notice}</Text> : null}
+          {error ? <Text size={12} color={theme['c-font-label']}>{error}</Text> : null}
           {pageItems.length
             ? pageItems.map(renderItem)
             : <Text size={13} color={theme['c-font-label']} style={styles.empty}>{loading ? t('loading') : t('source_library_empty')}</Text>
@@ -221,30 +188,21 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
 })
 
 const styles = createStyle({
-  toolbar: {
+  bar: {
     flexDirection: 'row',
     alignItems: 'center',
+    flexWrap: 'wrap',
     paddingBottom: 6,
   },
-  search: {
-    flex: 1,
-    height: 32,
-    borderRadius: 4,
-    paddingLeft: 8,
-    paddingRight: 8,
-    fontSize: 13,
-  },
   smallBtn: {
-    marginLeft: 6,
+    marginRight: 6,
+    marginBottom: 4,
     paddingLeft: 8,
     paddingRight: 8,
     paddingTop: 5,
     paddingBottom: 5,
     borderRadius: 4,
     backgroundColor: 'rgba(128,128,128,0.18)',
-  },
-  notice: {
-    paddingBottom: 4,
   },
   empty: {
     paddingTop: 30,

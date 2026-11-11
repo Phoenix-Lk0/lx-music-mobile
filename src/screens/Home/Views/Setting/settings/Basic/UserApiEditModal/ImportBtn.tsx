@@ -2,6 +2,7 @@ import { useMemo, useRef } from 'react'
 
 import DorpDownMenu, { type DorpDownMenuProps as _DorpDownMenuProps } from '@/components/common/DorpDownMenu'
 import Text from '@/components/common/Text'
+import ErrorBoundary from '@/components/common/ErrorBoundary'
 import { useI18n } from '@/lang'
 import ScriptImportExport, { type ScriptImportExportType } from './ScriptImportExport'
 import ScriptImportOnline, { type ScriptImportOnlineType } from './ScriptImportOnline'
@@ -66,7 +67,9 @@ export default ({ btnStyle }: BtnProps) => {
       <Text size={14} color={theme['c-button-font']}>{t('user_api_btn_import')}</Text>
       <ScriptImportExport ref={scriptImportExportRef} />
       <ScriptImportOnline ref={scriptImportOnlineRef} />
-      <SourceLibrary ref={sourceLibraryRef} />
+      <ErrorBoundary label="音源库">
+        <SourceLibrary ref={sourceLibraryRef} />
+      </ErrorBoundary>
     </DorpDownMenu>
   )
 }

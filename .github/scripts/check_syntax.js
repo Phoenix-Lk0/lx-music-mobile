@@ -17,6 +17,7 @@ try {
 // 只检查本分支新增/修改的文件，上游文件存在 Babel 解析差异，全量扫描会误报
 const files = [
   'src/config/sourceLibrary.ts',
+  'src/components/common/ErrorBoundary.tsx',
   'src/core/sourceLibrary.ts',
   'src/core/version.ts',
   'src/config/constant.ts',
