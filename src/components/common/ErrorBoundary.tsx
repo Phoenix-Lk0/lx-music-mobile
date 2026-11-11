@@ -1,11 +1,12 @@
 /**
- * 渲染错误边界：子组件渲染抛错时显示错误信息，避免整页白屏、
- * 并按 Ctrl 堆栈写日志，便于定位问题。
+ * 渲染错误边界：子组件渲染抛错时显示错误信息，避免整页白屏，
+ * 同时写入 App 缓存目录的 error.log（release 版也生效），便于取证。
  */
 import { Component, type ErrorInfo, type ReactNode } from 'react'
 import { View } from 'react-native'
 import Text from '@/components/common/Text'
 import { toast } from '@/utils/tools'
+import { log } from '@/utils/log'
 
 interface Props {
   children: ReactNode
@@ -24,7 +25,14 @@ export default class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, info: ErrorInfo) {
-    console.error(`[${this.props.label ?? 'ErrorBoundary'}] render error:`, error?.message, info?.componentStack)
+    const detail = [
+      `[${this.props.label ?? 'ErrorBoundary'}] render error`,
+      `message: ${error?.message ?? 'unknown'}`,
+      `name: ${error?.name ?? ''}`,
+      `stack: ${error?.stack ?? ''}`,
+      `componentStack: ${info?.componentStack ?? ''}`,
+    ].join('\n')
+    log.error(detail)
     toast(`${this.props.label ?? ''}渲染失败：${error?.message ?? 'unknown'}`, 'long')
   }
 
