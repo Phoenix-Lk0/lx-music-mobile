@@ -543,5 +543,7 @@
   "source_library_search": "搜索音源名 / 作者",
   "source_library_mirror_in_use": "已启用镜像地址",
   "source_library_all_versions": "所有版本",
-  "source_library_unique_only": "仅最新版"
+  "source_library_unique_only": "仅最新版",
+  "source_library_prev": "上一页",
+  "source_library_next": "下一页"
 }

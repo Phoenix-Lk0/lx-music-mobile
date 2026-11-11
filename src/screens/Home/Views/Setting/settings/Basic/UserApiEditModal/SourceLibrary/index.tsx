@@ -1,13 +1,13 @@
 /**
  * 在线音源库 - 列表弹窗
  *
- * 容器用 ConfirmAlert（已验证可正常显示），内部列表用「固定像素高度 + FlatList」：
- * - ConfirmAlert 的 ScrollView 只有 flexGrow:0，内容超高会被裁剪且滑不动
- * - 给列表区一个确定的像素高度，FlatList 才能正确滚动并虚拟化
- * 不注册新导航页面，避免与上游页面注册逻辑冲突。
+ * 布局约束（踩过的坑，勿随意改动）：
+ * - 容器必须是 ConfirmAlert：它已验证可正常显示；Dialog 的百分比高度在居中容器里会算成 0 → 白屏
+ * - 列表渲染必须用 map，不能用 FlatList：VirtualizedList 嵌在 ConfirmAlert 的 ScrollView 里会渲染空白
+ * - 因此用分页控制单页条数，保证内容不超出弹窗可视高度，不需要滚动
  */
-import { forwardRef, useCallback, useImperativeHandle, useMemo, useRef, useState } from 'react'
-import { View, TouchableOpacity, FlatList, StyleSheet, Dimensions, type ListRenderItemInfo } from 'react-native'
+import { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react'
+import { View, TouchableOpacity, StyleSheet } from 'react-native'
 import ConfirmAlert, { type ConfirmAlertType } from '@/components/common/ConfirmAlert'
 import Input from '@/components/common/Input'
 import Text from '@/components/common/Text'
@@ -22,8 +22,8 @@ export interface SourceLibraryType {
   show: () => void
 }
 
-// 列表区固定高度：屏幕高度的 48%，保证 FlatList 有确定边界
-const LIST_HEIGHT = Math.round(Dimensions.get('window').height * 0.48)
+// 单页条数：10 条 × 约 64px ≈ 640px，稳定落在弹窗可视区内
+const PAGE_SIZE = 10
 
 const formatVersion = (version?: string) => {
   if (!version) return ''
@@ -44,6 +44,7 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
   const [busyId, setBusyId] = useState('')
   const [keyword, setKeyword] = useState('')
   const [showAll, setShowAll] = useState(false)
+  const [page, setPage] = useState(0)
 
   const load = useCallback(async(force = false) => {
     setLoading(true)
@@ -71,6 +72,7 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
           alertRef.current?.setVisible(true)
         })
       }
+      setPage(0)
       void load()
     },
   }))
@@ -116,7 +118,15 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
     })
   }, [filtered, showAll])
 
-  const renderItem = ({ item }: ListRenderItemInfo<SourceLibraryListItem>) => {
+  const pageCount = Math.max(1, Math.ceil(display.length / PAGE_SIZE))
+  const currentPage = Math.min(page, pageCount - 1)
+  const pageItems = display.slice(currentPage * PAGE_SIZE, currentPage * PAGE_SIZE + PAGE_SIZE)
+
+  useEffect(() => {
+    setPage(0)
+  }, [keyword, showAll])
+
+  const renderItem = (item: SourceLibraryListItem) => {
     const busy = busyId == item.id
     const installed = item.state == 'installed'
     const outdated = item.state == 'outdated'
@@ -130,15 +140,13 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
           : t('source_library_install')
 
     return (
-      <View style={styles.item}>
+      <View style={styles.item} key={item.id}>
         <View style={styles.itemInfo}>
           <Text size={15} numberOfLines={1}>
             {item.name}
             {item.version ? <Text size={12} color={theme['c-font-label']}>{ '  ' + formatVersion(item.version) }</Text> : null}
-            {item.author ? <Text size={12} color={theme['c-font-label']}>{ '  ' + item.author }</Text> : null}
           </Text>
-          {item.description ? <Text size={12} color={theme['c-font-label']} numberOfLines={2} style={styles.desc}>{item.description}</Text> : null}
-          {item.failedOver ? <Text size={11} color={theme['c-font-label']}>{t('source_library_mirror_in_use')}</Text> : null}
+          {item.author ? <Text size={12} color={theme['c-font-label']} numberOfLines={1}>{item.author}</Text> : null}
         </View>
         <TouchableOpacity
           style={{
@@ -161,7 +169,7 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
       ? <ConfirmAlert
           ref={alertRef}
           showConfirm={false}
-          title={`${t('source_library')}  ${display.length}/${items.length}`}
+          title={`${t('source_library')}  ${display.length}`}
           cancelText={t('close')}
           onHide={() => { setVisible(false) }}
         >
@@ -173,37 +181,40 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
               style={{ ...styles.search, backgroundColor: theme['c-primary-input-background'] }}
               size={13}
             />
-            <TouchableOpacity style={styles.toggle} onPress={() => { setShowAll(v => !v) }}>
-              <Text size={12} color={theme['c-button-font']}>
-                {showAll ? t('source_library_unique_only') : t('source_library_all_versions')}
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.refresh} disabled={loading} onPress={() => { void load(true) }}>
+            <TouchableOpacity style={styles.smallBtn} onPress={() => { void load(true) }}>
               <Text size={12} color={theme['c-button-font']}>
                 {loading ? t('source_library_loading') : t('source_library_refresh')}
               </Text>
             </TouchableOpacity>
           </View>
+          <View style={styles.toolbar}>
+            <TouchableOpacity style={styles.smallBtn} onPress={() => { setShowAll(v => !v) }}>
+              <Text size={12} color={theme['c-button-font']}>
+                {showAll ? t('source_library_unique_only') : t('source_library_all_versions')}
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.smallBtn}
+              disabled={currentPage <= 0}
+              onPress={() => { setPage(p => Math.max(0, p - 1)) }}
+            >
+              <Text size={12} color={theme['c-button-font']}>{t('source_library_prev')}</Text>
+            </TouchableOpacity>
+            <Text size={12} color={theme['c-font-label']}>{` ${currentPage + 1}/${pageCount} `}</Text>
+            <TouchableOpacity
+              style={styles.smallBtn}
+              disabled={currentPage >= pageCount - 1}
+              onPress={() => { setPage(p => Math.min(pageCount - 1, p + 1)) }}
+            >
+              <Text size={12} color={theme['c-button-font']}>{t('source_library_next')}</Text>
+            </TouchableOpacity>
+          </View>
           {error ? <Text size={12} color={theme['c-font-label']} style={styles.notice}>{error}</Text> : null}
           {notice ? <Text size={11} color={theme['c-font-label']} style={styles.notice} numberOfLines={2}>{notice}</Text> : null}
-          <View style={{ height: LIST_HEIGHT }}>
-            <FlatList
-              data={display}
-              renderItem={renderItem}
-              keyExtractor={item => item.id}
-              style={styles.list}
-              contentContainerStyle={styles.listContent}
-              keyboardShouldPersistTaps="handled"
-              initialNumToRender={12}
-              maxToRenderPerBatch={12}
-              windowSize={7}
-              ListEmptyComponent={
-                <Text size={13} color={theme['c-font-label']} style={styles.empty}>
-                  {loading ? t('loading') : t('source_library_empty')}
-                </Text>
-              }
-            />
-          </View>
+          {pageItems.length
+            ? pageItems.map(renderItem)
+            : <Text size={13} color={theme['c-font-label']} style={styles.empty}>{loading ? t('loading') : t('source_library_empty')}</Text>
+          }
         </ConfirmAlert>
       : null
   )
@@ -223,32 +234,17 @@ const styles = createStyle({
     paddingRight: 8,
     fontSize: 13,
   },
-  toggle: {
+  smallBtn: {
     marginLeft: 6,
     paddingLeft: 8,
     paddingRight: 8,
-    paddingTop: 6,
-    paddingBottom: 6,
-    borderRadius: 4,
-    backgroundColor: 'rgba(128,128,128,0.18)',
-  },
-  refresh: {
-    marginLeft: 6,
-    paddingLeft: 8,
-    paddingRight: 8,
-    paddingTop: 6,
-    paddingBottom: 6,
+    paddingTop: 5,
+    paddingBottom: 5,
     borderRadius: 4,
     backgroundColor: 'rgba(128,128,128,0.18)',
   },
   notice: {
     paddingBottom: 4,
-  },
-  list: {
-    flex: 1,
-  },
-  listContent: {
-    paddingBottom: 8,
   },
   empty: {
     paddingTop: 30,
@@ -257,8 +253,8 @@ const styles = createStyle({
   item: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingTop: 8,
-    paddingBottom: 8,
+    paddingTop: 7,
+    paddingBottom: 7,
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: 'rgba(128,128,128,0.25)',
   },
@@ -266,9 +262,6 @@ const styles = createStyle({
     flexGrow: 1,
     flexShrink: 1,
     paddingRight: 10,
-  },
-  desc: {
-    marginTop: 2,
   },
   btn: {
     minWidth: 62,
