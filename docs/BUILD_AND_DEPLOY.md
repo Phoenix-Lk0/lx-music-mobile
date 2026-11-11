@@ -60,7 +60,7 @@ Windows 用系统环境变量面板设置同名变量；`ANDROID_HOME` 指向 `C
 
 ## 二、第一步：替换用户名占位符（必做，否则音源库拉不到列表）
 
-包内所有索引地址写的是 `{{GH_OWNER}}` / `{{GH_REPO}}` 占位符，必须先换成你的账号。
+包内所有索引地址写的是 `Phoenix-Lk0` / `lx-music-mobile` 占位符，必须先换成你的账号。
 
 ```bash
 cd lx-music-mobile-1.9.2-lib
@@ -69,8 +69,8 @@ cd lx-music-mobile-1.9.2-lib
 OWNER=your-github-name
 REPO=lx-music-mobile-lib
 
-grep -rl "{{GH_OWNER}}" . --exclude-dir=.git \
-  | xargs sed -i "s/{{GH_OWNER}}/$OWNER/g; s/{{GH_REPO}}/$REPO/g"
+grep -rl "Phoenix-Lk0" . --exclude-dir=.git \
+  | xargs sed -i "s/Phoenix-Lk0/$OWNER/g; s/lx-music-mobile/$REPO/g"
 ```
 
 **通过判据**：

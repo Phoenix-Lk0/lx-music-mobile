@@ -13,9 +13,9 @@ export const LIB_EDITION = true
  * 换仓库只需改这里，其余代码不动。
  */
 export const SOURCE_LIBRARY_URLS = [
-  'https://raw.githubusercontent.com/{{GH_OWNER}}/{{GH_REPO}}/main/library/index.json',
-  'https://cdn.jsdelivr.net/gh/{{GH_OWNER}}/{{GH_REPO}}@main/library/index.json',
-  'https://fastly.jsdelivr.net/gh/{{GH_OWNER}}/{{GH_REPO}}@main/library/index.json',
+  'https://raw.githubusercontent.com/Phoenix-Lk0/lx-music-mobile/main/library/index.json',
+  'https://cdn.jsdelivr.net/gh/Phoenix-Lk0/lx-music-mobile@main/library/index.json',
+  'https://fastly.jsdelivr.net/gh/Phoenix-Lk0/lx-music-mobile@main/library/index.json',
 ]
 
 /** 索引缓存有效期（毫秒），期间重复打开列表直接读缓存 */

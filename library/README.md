@@ -3,9 +3,9 @@
 App 从本目录的 `index.json` 读取音源列表。客户端按以下顺序取，先成功者生效：
 
 1. 用户在库页面内自定义的地址（如填过）
-2. `https://raw.githubusercontent.com/{{GH_OWNER}}/{{GH_REPO}}/main/library/index.json`
-3. `https://cdn.jsdelivr.net/gh/{{GH_OWNER}}/{{GH_REPO}}@main/library/index.json`
-4. `https://fastly.jsdelivr.net/gh/{{GH_OWNER}}/{{GH_REPO}}@main/library/index.json`
+2. `https://raw.githubusercontent.com/Phoenix-Lk0/lx-music-mobile/main/library/index.json`
+3. `https://cdn.jsdelivr.net/gh/Phoenix-Lk0/lx-music-mobile@main/library/index.json`
+4. `https://fastly.jsdelivr.net/gh/Phoenix-Lk0/lx-music-mobile@main/library/index.json`
 
 全部失败时回退到本机上次成功缓存（30 分钟 TTL 内不再请求）。
 
