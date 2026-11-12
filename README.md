@@ -12,7 +12,7 @@
   <!-- <a href="https://github.com/lyswhut/lx-music-mobile/blob/master/LICENSE"><img src="https://img.shields.io/github/license/lyswhut/lx-music-mobile" alt="License"></a> -->
 </p>
 
-<p align="center">一个基于 React Native 开发的音乐软件</p>
+<p align="center">一个基于上游项目二次开发的音乐软件</p>
 
 ## 说明
 
