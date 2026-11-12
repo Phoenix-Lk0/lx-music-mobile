@@ -283,7 +283,7 @@ export const buildList = async(index: SourceLibraryIndex, records?: InstallRecor
 }
 
 const fetchScriptOnce = async(url: string): Promise<string> => {
-  const resp = await httpFetch(url, { timeout: 20000 }).promise
+  const resp = await httpFetch(url, { timeout: 8000 }).promise
   if (resp.statusCode >= 400) throw new Error(`HTTP ${resp.statusCode}`)
   const script = typeof resp.body === 'string' ? resp.body : JSON.stringify(resp.body)
   if (!script.length) throw new Error('Empty script')
@@ -294,9 +294,25 @@ const fetchScriptOnce = async(url: string): Promise<string> => {
  * 依次尝试主地址与镜像地址，任一成功即返回。
  * 动态源（latest.js）不写 sha256/size，故校验只对固定脚本生效。
  */
+
+/**
+ * 把 GitHub raw 地址转成 jsDelivr 镜像地址。
+ * jsDelivr 可代理任意公开仓库，国内通常可直连，用于无代理时下载第三方源脚本。
+ */
+const toJsdelivrUrl = (url: string): string | null => {
+  const m = /^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)\/(.+)$/.exec(url)
+  if (!m) return null
+  return `https://cdn.jsdelivr.net/gh/${m[1]}/${m[2]}@${m[3]}/${m[4]}`
+}
+
 const downloadScript = async(item: SourceLibraryItem): Promise<string> => {
-  const urls = [item.scriptUrl]
-  if (item.mirrorUrl && item.mirrorUrl !== item.scriptUrl) urls.push(item.mirrorUrl)
+  const urls: string[] = []
+  const push = (u?: string | null) => { if (u && !urls.includes(u)) urls.push(u) }
+  // 顺序：镜像 > jsDelivr(主地址) > 主地址 > jsDelivr(镜像)
+  push(toJsdelivrUrl(item.scriptUrl))
+  push(item.mirrorUrl)
+  push(item.scriptUrl)
+  if (item.mirrorUrl) push(toJsdelivrUrl(item.mirrorUrl))
 
   let lastError: Error | undefined
   for (const url of urls) {
