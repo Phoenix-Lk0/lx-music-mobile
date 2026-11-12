@@ -1,17 +1,17 @@
 /**
  * 在线音源库 - 列表弹窗
  *
- * 性能与容器约束（真机验证过程，改动前必读）：
- * - 容器用 Dialog + **数字**高度：百分比高度会与 maxHeight 冲突被算成 0（白屏）
- * - 列表用 FlatList：Dialog 给了确定高度，body 与 FlatList 均 flex:1，虚拟化生效
- *   （早期把 FlatList 塞进 ConfirmAlert 的 ScrollView 里会嵌套虚拟列表，渲染空白）
- * - buildList 是 async，必须 await，否则 items 是 Promise（length 为 undefined）
- * - 安装后只做局部状态更新，不重新拉取索引，避免整表重渲染
- * - 默认折叠同名多版本，减少首屏渲染量
+ * 关键约束（真机验证过程，改动前必读）：
+ * 1. 用 react-native 原生 Modal，**不要**用项目封装的 Modal/Dialog/ConfirmAlert：
+ *    它们的 children 被 <TouchableWithoutFeedback> 包裹（用于点背景关闭），
+ *    会与内部 FlatList 争抢 responder，按下后需等 delayPressIn(~130ms) 才让出，
+ *    表现为「触发滑动延迟高、滚起来之后才跟手」。
+ * 2. Modal 的 children 里不要再用 Touchable 包整块区域，同理会造成手势竞争。
+ * 3. buildList 是 async，必须 await，否则 items 是 Promise（length 为 undefined）。
+ * 4. 面板高度用数字，不用百分比（百分比在居中容器里会算成 0）。
  */
 import { forwardRef, useCallback, useImperativeHandle, useMemo, useRef, useState } from 'react'
-import { View, TouchableOpacity, FlatList, StyleSheet, Dimensions, type ListRenderItemInfo } from 'react-native'
-import Dialog, { type DialogType } from '@/components/common/Dialog'
+import { Modal, View, TouchableOpacity, FlatList, StyleSheet, Dimensions, type ListRenderItemInfo } from 'react-native'
 import Text from '@/components/common/Text'
 import { createStyle, toast } from '@/utils/tools'
 import { useTheme } from '@/store/theme/hook'
@@ -38,7 +38,6 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
   const theme = useTheme()
   useUserApiList()
 
-  const dialogRef = useRef<DialogType>(null)
   const [visible, setVisible] = useState(false)
   const [loading, setLoading] = useState(false)
   const [items, setItems] = useState<SourceLibraryListItem[]>([])
@@ -64,19 +63,18 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
   useImperativeHandle(ref, () => ({
     show() {
       setVisible(true)
-      requestAnimationFrame(() => {
-        dialogRef.current?.setVisible(true)
-      })
       void load()
     },
   }))
+
+  const close = useCallback(() => { setVisible(false) }, [])
 
   const handleInstall = useCallback(async(item: SourceLibraryListItem) => {
     setBusyId(item.id)
     try {
       await installItem(item)
-      // 局部更新，避免重新拉取索引导致整表重渲染
-      setItems(prev => prev.map(x => x.id == item.id
+      // 局部更新，避免重新拉取与整表重算
+      setItems(prev => prev.map(x => x.id === item.id
         ? { ...x, state: 'installed', localVersion: item.version }
         : x))
       toast(t('source_library_install_success', { name: item.name }))
@@ -87,7 +85,7 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
     }
   }, [t])
 
-  // 默认每个音源只显示最新版（数据已按版本降序），减少首屏渲染量
+  // 默认折叠同名多版本，减少首屏条目数
   const display = useMemo(() => {
     if (showAll) return items
     const seen = new Set<string>()
@@ -100,10 +98,10 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
   }, [items, showAll])
 
   const renderItem = useCallback(({ item }: ListRenderItemInfo<SourceLibraryListItem>) => {
-    const busy = busyId == item.id
-    const installed = item.state == 'installed'
-    const outdated = item.state == 'outdated'
-    const dead = item.status == 'dead'
+    const busy = busyId === item.id
+    const installed = item.state === 'installed'
+    const outdated = item.state === 'outdated'
+    const dead = item.status === 'dead'
     const btnText = busy
       ? t('source_library_installing')
       : installed
@@ -138,55 +136,86 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
     )
   }, [busyId, handleInstall, t, theme])
 
-  if (!visible) return null
-
   return (
-    <Dialog
-      ref={dialogRef}
-      title={`${t('source_library')} ${display.length}`}
-      height={PANEL_HEIGHT}
-      onHide={() => { setVisible(false) }}
+    <Modal
+      visible={visible}
+      transparent
+      animationType="fade"
+      statusBarTranslucent
+      onRequestClose={close}
     >
-      <View style={styles.body}>
-        <View style={styles.bar}>
-          <TouchableOpacity style={styles.smallBtn} onPress={() => { setShowAll(v => !v) }}>
-            <Text size={12} color={theme['c-button-font']}>
-              {showAll ? t('source_library_unique_only') : t('source_library_all_versions')}
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.smallBtn} onPress={() => { void load(true) }}>
-            <Text size={12} color={theme['c-button-font']}>
-              {loading ? t('source_library_loading') : t('source_library_refresh')}
-            </Text>
-          </TouchableOpacity>
+      {/* 遮罩用普通 View，不用 Touchable，避免与列表争抢手势 */}
+      <View style={styles.overlay}>
+        <View style={{ ...styles.panel, height: PANEL_HEIGHT, backgroundColor: theme['c-content-background'] }}>
+          <View style={styles.header}>
+            <Text size={14} numberOfLines={1}>{`${t('source_library')} ${display.length}`}</Text>
+            <TouchableOpacity style={styles.closeBtn} onPress={close}>
+              <Text size={13} color={theme['c-button-font']}>{t('close')}</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.bar}>
+            <TouchableOpacity style={styles.smallBtn} onPress={() => { setShowAll(v => !v) }}>
+              <Text size={12} color={theme['c-button-font']}>
+                {showAll ? t('source_library_unique_only') : t('source_library_all_versions')}
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.smallBtn} onPress={() => { void load(true) }}>
+              <Text size={12} color={theme['c-button-font']}>
+                {loading ? t('source_library_loading') : t('source_library_refresh')}
+              </Text>
+            </TouchableOpacity>
+          </View>
+          {error ? <Text size={12} color={theme['c-font-label']} style={styles.notice}>{error}</Text> : null}
+          <FlatList
+            data={display}
+            renderItem={renderItem}
+            keyExtractor={keyExtractor}
+            style={styles.list}
+            contentContainerStyle={styles.listContent}
+            initialNumToRender={10}
+            maxToRenderPerBatch={10}
+            windowSize={7}
+            updateCellsBatchingPeriod={50}
+            keyboardShouldPersistTaps="handled"
+            ListEmptyComponent={
+              <Text size={13} color={theme['c-font-label']} style={styles.empty}>
+                {loading ? t('loading') : t('source_library_empty')}
+              </Text>
+            }
+          />
         </View>
-        {error ? <Text size={12} color={theme['c-font-label']} style={styles.notice}>{error}</Text> : null}
-        <FlatList
-          data={display}
-          renderItem={renderItem}
-          keyExtractor={keyExtractor}
-          style={styles.list}
-          contentContainerStyle={styles.listContent}
-          initialNumToRender={10}
-          maxToRenderPerBatch={10}
-          windowSize={7}
-          updateCellsBatchingPeriod={50}
-          ListEmptyComponent={
-            <Text size={13} color={theme['c-font-label']} style={styles.empty}>
-              {loading ? t('loading') : t('source_library_empty')}
-            </Text>
-          }
-        />
       </View>
-    </Dialog>
+    </Modal>
   )
 })
 
 const styles = createStyle({
-  body: {
+  overlay: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+  },
+  panel: {
+    width: Math.round(Dimensions.get('window').width * 0.94),
+    borderRadius: 6,
+    paddingTop: 8,
     paddingLeft: 10,
     paddingRight: 10,
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingBottom: 6,
+  },
+  closeBtn: {
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 4,
+    paddingBottom: 4,
+    borderRadius: 4,
+    backgroundColor: 'rgba(128,128,128,0.25)',
   },
   bar: {
     flexDirection: 'row',
