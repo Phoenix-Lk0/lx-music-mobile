@@ -48,7 +48,8 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
     setError('')
     try {
       const { index, fromCache } = await fetchSourceLibraryIndex(force)
-      setItems(buildList(index))
+      // buildList 是 async，必须 await，否则 items 会是 Promise（length 为 undefined）
+      setItems(await buildList(index))
       if (fromCache) setError(t('source_library_offline_cache'))
     } catch (err: any) {
       setItems([])
