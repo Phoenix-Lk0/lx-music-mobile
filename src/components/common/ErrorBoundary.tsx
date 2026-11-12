@@ -33,7 +33,7 @@ export default class ErrorBoundary extends Component<Props, State> {
       `componentStack: ${info?.componentStack ?? ''}`,
     ].join('\n')
     log.error(detail)
-    const msg = `${error?.name ?? 'Error'}: ${error?.message ?? 'unknown'}\n\n${String(error?.stack ?? '').slice(0, 600)}`
+    const msg = `${error?.name ?? 'Error'}: ${error?.message ?? 'unknown'}\n\n组件栈:\n${String(info?.componentStack ?? '').slice(0, 500)}\n\n${String(error?.stack ?? '').split('\n').slice(0, 3).join('\n')}`
     toast(`${this.props.label ?? ''}渲染失败`, 'long')
     // 系统对话框不会被 toast 截断，便于直接截图取证
     Alert.alert(`${this.props.label ?? ''}渲染错误`, msg)
