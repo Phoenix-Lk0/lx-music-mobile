@@ -1,15 +1,16 @@
 /**
  * 在线音源库 - 列表弹窗
  *
- * 容器说明（真机验证过程，勿随意改动）：
- * - ConfirmAlert 能正常显示，但其内部 ScrollView 是 flexGrow:0，
- *   内容超高后被弹窗 maxHeight 裁掉且无法滚动（截图确认的"划不动"现象）
- * - 因此改用 ConfirmAlert 的父组件 Dialog，并传入**数字**高度：
- *   传 '80%' 这类百分比时，在居中容器内与 maxHeight 冲突会被算成 0 导致白屏
- * - 高度固定后，内部 ScrollView 用 flex:1 即可正常滚动
+ * 性能与容器约束（真机验证过程，改动前必读）：
+ * - 容器用 Dialog + **数字**高度：百分比高度会与 maxHeight 冲突被算成 0（白屏）
+ * - 列表用 FlatList：Dialog 给了确定高度，body 与 FlatList 均 flex:1，虚拟化生效
+ *   （早期把 FlatList 塞进 ConfirmAlert 的 ScrollView 里会嵌套虚拟列表，渲染空白）
+ * - buildList 是 async，必须 await，否则 items 是 Promise（length 为 undefined）
+ * - 安装后只做局部状态更新，不重新拉取索引，避免整表重渲染
+ * - 默认折叠同名多版本，减少首屏渲染量
  */
-import { forwardRef, useCallback, useImperativeHandle, useRef, useState } from 'react'
-import { View, TouchableOpacity, ScrollView, StyleSheet, Dimensions } from 'react-native'
+import { forwardRef, useCallback, useImperativeHandle, useMemo, useRef, useState } from 'react'
+import { View, TouchableOpacity, FlatList, StyleSheet, Dimensions, type ListRenderItemInfo } from 'react-native'
 import Dialog, { type DialogType } from '@/components/common/Dialog'
 import Text from '@/components/common/Text'
 import { createStyle, toast } from '@/utils/tools'
@@ -23,13 +24,14 @@ export interface SourceLibraryType {
   show: () => void
 }
 
-// 必须是数字：百分比在 Dialog 的居中容器里会与 maxHeight 冲突
 const PANEL_HEIGHT = Math.round(Dimensions.get('window').height * 0.75)
 
 const formatVersion = (version?: string) => {
   if (!version) return ''
   return /^\d/.test(version) ? `v${version}` : version
 }
+
+const keyExtractor = (item: SourceLibraryListItem) => item.id
 
 export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
   const t = useI18n()
@@ -42,13 +44,13 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
   const [items, setItems] = useState<SourceLibraryListItem[]>([])
   const [error, setError] = useState('')
   const [busyId, setBusyId] = useState('')
+  const [showAll, setShowAll] = useState(false)
 
   const load = useCallback(async(force = false) => {
     setLoading(true)
     setError('')
     try {
       const { index, fromCache } = await fetchSourceLibraryIndex(force)
-      // buildList 是 async，必须 await，否则 items 会是 Promise（length 为 undefined）
       setItems(await buildList(index))
       if (fromCache) setError(t('source_library_offline_cache'))
     } catch (err: any) {
@@ -69,21 +71,35 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
     },
   }))
 
-  const handleInstall = async(item: SourceLibraryListItem) => {
-    if (busyId) return
+  const handleInstall = useCallback(async(item: SourceLibraryListItem) => {
     setBusyId(item.id)
     try {
       await installItem(item)
+      // 局部更新，避免重新拉取索引导致整表重渲染
+      setItems(prev => prev.map(x => x.id == item.id
+        ? { ...x, state: 'installed', localVersion: item.version }
+        : x))
       toast(t('source_library_install_success', { name: item.name }))
-      await load(true)
     } catch (err: any) {
       toast(t('source_library_install_failed', { message: err?.message ?? 'unknown' }), 'long')
     } finally {
       setBusyId('')
     }
-  }
+  }, [t])
 
-  const renderItem = (item: SourceLibraryListItem, index: number) => {
+  // 默认每个音源只显示最新版（数据已按版本降序），减少首屏渲染量
+  const display = useMemo(() => {
+    if (showAll) return items
+    const seen = new Set<string>()
+    return items.filter(item => {
+      const key = String(item.name ?? '').trim().toLowerCase()
+      if (seen.has(key)) return false
+      seen.add(key)
+      return true
+    })
+  }, [items, showAll])
+
+  const renderItem = useCallback(({ item }: ListRenderItemInfo<SourceLibraryListItem>) => {
     const busy = busyId == item.id
     const installed = item.state == 'installed'
     const outdated = item.state == 'outdated'
@@ -97,7 +113,7 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
           : t('source_library_install')
 
     return (
-      <View style={styles.item} key={`${item.id}_${index}`}>
+      <View style={styles.item}>
         <View style={styles.itemInfo}>
           <Text size={15} numberOfLines={1}>
             {item.name}
@@ -120,34 +136,47 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
         </TouchableOpacity>
       </View>
     )
-  }
+  }, [busyId, handleInstall, t, theme])
 
   if (!visible) return null
 
   return (
     <Dialog
       ref={dialogRef}
-      title={`${t('source_library')} ${items.length}`}
+      title={`${t('source_library')} ${display.length}`}
       height={PANEL_HEIGHT}
       onHide={() => { setVisible(false) }}
     >
       <View style={styles.body}>
         <View style={styles.bar}>
-          <Text size={12} color={theme['c-font-label']}>
-            {loading ? t('source_library_loading') : `${items.length}`}
-          </Text>
+          <TouchableOpacity style={styles.smallBtn} onPress={() => { setShowAll(v => !v) }}>
+            <Text size={12} color={theme['c-button-font']}>
+              {showAll ? t('source_library_unique_only') : t('source_library_all_versions')}
+            </Text>
+          </TouchableOpacity>
           <TouchableOpacity style={styles.smallBtn} onPress={() => { void load(true) }}>
-            <Text size={12} color={theme['c-button-font']}>{t('source_library_refresh')}</Text>
+            <Text size={12} color={theme['c-button-font']}>
+              {loading ? t('source_library_loading') : t('source_library_refresh')}
+            </Text>
           </TouchableOpacity>
         </View>
-        {error ? <Text size={12} color={theme['c-font-label']}>{error}</Text> : null}
-        {/* 高度已由 Dialog 固定，此处 flex:1 才能滚动 */}
-        <ScrollView style={styles.list} contentContainerStyle={styles.listContent}>
-          {items.length
-            ? items.map(renderItem)
-            : <Text size={13} color={theme['c-font-label']} style={styles.empty}>{loading ? t('loading') : t('source_library_empty')}</Text>
+        {error ? <Text size={12} color={theme['c-font-label']} style={styles.notice}>{error}</Text> : null}
+        <FlatList
+          data={display}
+          renderItem={renderItem}
+          keyExtractor={keyExtractor}
+          style={styles.list}
+          contentContainerStyle={styles.listContent}
+          initialNumToRender={10}
+          maxToRenderPerBatch={10}
+          windowSize={7}
+          updateCellsBatchingPeriod={50}
+          ListEmptyComponent={
+            <Text size={13} color={theme['c-font-label']} style={styles.empty}>
+              {loading ? t('loading') : t('source_library_empty')}
+            </Text>
           }
-        </ScrollView>
+        />
       </View>
     </Dialog>
   )
@@ -162,16 +191,19 @@ const styles = createStyle({
   bar: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
     paddingBottom: 6,
   },
   smallBtn: {
+    marginRight: 6,
     paddingLeft: 8,
     paddingRight: 8,
     paddingTop: 4,
     paddingBottom: 4,
     borderRadius: 4,
     backgroundColor: 'rgba(128,128,128,0.18)',
+  },
+  notice: {
+    paddingBottom: 4,
   },
   list: {
     flex: 1,
