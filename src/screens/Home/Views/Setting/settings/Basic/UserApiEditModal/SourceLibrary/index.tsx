@@ -1,12 +1,16 @@
 /**
  * 在线音源库 - 列表弹窗
  *
- * 复用 ConfirmAlert 作为容器，不引入新的导航页面，
- * 因此不会与上游任何页面注册逻辑产生冲突。
+ * 容器说明（真机验证过程，勿随意改动）：
+ * - ConfirmAlert 能正常显示，但其内部 ScrollView 是 flexGrow:0，
+ *   内容超高后被弹窗 maxHeight 裁掉且无法滚动（截图确认的"划不动"现象）
+ * - 因此改用 ConfirmAlert 的父组件 Dialog，并传入**数字**高度：
+ *   传 '80%' 这类百分比时，在居中容器内与 maxHeight 冲突会被算成 0 导致白屏
+ * - 高度固定后，内部 ScrollView 用 flex:1 即可正常滚动
  */
 import { forwardRef, useCallback, useImperativeHandle, useRef, useState } from 'react'
-import { View, TouchableOpacity, StyleSheet } from 'react-native'
-import ConfirmAlert, { type ConfirmAlertType } from '@/components/common/ConfirmAlert'
+import { View, TouchableOpacity, ScrollView, StyleSheet, Dimensions } from 'react-native'
+import Dialog, { type DialogType } from '@/components/common/Dialog'
 import Text from '@/components/common/Text'
 import { createStyle, toast } from '@/utils/tools'
 import { useTheme } from '@/store/theme/hook'
@@ -19,6 +23,9 @@ export interface SourceLibraryType {
   show: () => void
 }
 
+// 必须是数字：百分比在 Dialog 的居中容器里会与 maxHeight 冲突
+const PANEL_HEIGHT = Math.round(Dimensions.get('window').height * 0.75)
+
 const formatVersion = (version?: string) => {
   if (!version) return ''
   return /^\d/.test(version) ? `v${version}` : version
@@ -29,22 +36,19 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
   const theme = useTheme()
   useUserApiList()
 
-  const alertRef = useRef<ConfirmAlertType>(null)
+  const dialogRef = useRef<DialogType>(null)
   const [visible, setVisible] = useState(false)
   const [loading, setLoading] = useState(false)
   const [items, setItems] = useState<SourceLibraryListItem[]>([])
   const [error, setError] = useState('')
-  const [notice, setNotice] = useState('')
   const [busyId, setBusyId] = useState('')
-  const [startIndex, setStartIndex] = useState(0)
 
   const load = useCallback(async(force = false) => {
     setLoading(true)
     setError('')
     try {
       const { index, fromCache } = await fetchSourceLibraryIndex(force)
-      setItems(await buildList(index))
-      setNotice(index.notice ?? '')
+      setItems(buildList(index))
       if (fromCache) setError(t('source_library_offline_cache'))
     } catch (err: any) {
       setItems([])
@@ -56,24 +60,16 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
 
   useImperativeHandle(ref, () => ({
     show() {
-      if (visible) {
-        alertRef.current?.setVisible(true)
-      } else {
-        setVisible(true)
-        requestAnimationFrame(() => {
-          alertRef.current?.setVisible(true)
-        })
-      }
+      setVisible(true)
+      requestAnimationFrame(() => {
+        dialogRef.current?.setVisible(true)
+      })
       void load()
     },
   }))
 
   const handleInstall = async(item: SourceLibraryListItem) => {
     if (busyId) return
-    if (item.status == 'dead') {
-      toast(t('source_library_dead_tip'), 'long')
-      return
-    }
     setBusyId(item.id)
     try {
       await installItem(item)
@@ -85,10 +81,6 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
       setBusyId('')
     }
   }
-
-  const PAGE = 12
-  const pageStart = startIndex >= items.length ? 0 : startIndex
-  const pageItems = items.slice(pageStart, pageStart + PAGE)
 
   const renderItem = (item: SourceLibraryListItem, index: number) => {
     const busy = busyId == item.id
@@ -104,17 +96,14 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
           : t('source_library_install')
 
     return (
-      <View style={styles.item} key={`${startIndex}_${index}`}>
+      <View style={styles.item} key={`${item.id}_${index}`}>
         <View style={styles.itemInfo}>
-          <Text size={15}>
+          <Text size={15} numberOfLines={1}>
             {item.name}
             {item.version ? <Text size={12} color={theme['c-font-label']}>{ '  ' + formatVersion(item.version) }</Text> : null}
             {item.author ? <Text size={12} color={theme['c-font-label']}>{ '  ' + item.author }</Text> : null}
           </Text>
-          {item.description ? <Text size={12} color={theme['c-font-label']} style={styles.desc}>{item.description}</Text> : null}
-          {item.localVersion && outdated
-            ? <Text size={12} color={theme['c-font-label']}>{ t('source_library_local_version', { version: formatVersion(item.localVersion) }) }</Text>
-            : null}
+          {item.description ? <Text size={12} color={theme['c-font-label']} numberOfLines={2}>{item.description}</Text> : null}
         </View>
         <TouchableOpacity
           style={{
@@ -132,69 +121,72 @@ export default forwardRef<SourceLibraryType, {}>((_props, ref) => {
     )
   }
 
+  if (!visible) return null
+
   return (
-    visible
-      ? <ConfirmAlert
-          ref={alertRef}
-          showConfirm={false}
-          title={`${t('source_library')} ${items.length}`}
-          cancelText={t('close')}
-          onHide={() => { setVisible(false) }}
-        >
-          <View style={styles.header}>
-            <Text size={12} color={theme['c-font-label']}>
-              {loading ? t('source_library_loading') : t('source_library_count', { count: items.length })}
-            </Text>
-            <TouchableOpacity style={styles.refresh} disabled={loading} onPress={() => { void load(true) }}>
-              <Text size={12} color={theme['c-button-font']}>{t('source_library_refresh')}</Text>
-            </TouchableOpacity>
-          </View>
-          {notice ? <Text size={12} color={theme['c-font-label']} style={styles.notice}>{notice}</Text> : null}
-          {error ? <Text size={12} color={theme['c-font-label']} style={styles.notice}>{error}</Text> : null}
-          {!loading && !items.length && !error
-            ? <Text size={13} color={theme['c-font-label']} style={styles.empty}>{t('source_library_empty')}</Text>
-            : null}
-          {pageItems.map((item, i) => renderItem(item, i))}
-          {items.length > PAGE
-            ? <TouchableOpacity style={styles.header} onPress={() => { setStartIndex((pageStart + PAGE) % items.length) }}>
-                <Text size={12} color={theme['c-button-font']}>
-                  {`${pageStart + 1}-${Math.min(pageStart + PAGE, items.length)} / ${items.length}  ${t('source_library_next')}`}
-                </Text>
-              </TouchableOpacity>
-            : null}
-        </ConfirmAlert>
-      : null
+    <Dialog
+      ref={dialogRef}
+      title={`${t('source_library')} ${items.length}`}
+      height={PANEL_HEIGHT}
+      onHide={() => { setVisible(false) }}
+    >
+      <View style={styles.body}>
+        <View style={styles.bar}>
+          <Text size={12} color={theme['c-font-label']}>
+            {loading ? t('source_library_loading') : `${items.length}`}
+          </Text>
+          <TouchableOpacity style={styles.smallBtn} onPress={() => { void load(true) }}>
+            <Text size={12} color={theme['c-button-font']}>{t('source_library_refresh')}</Text>
+          </TouchableOpacity>
+        </View>
+        {error ? <Text size={12} color={theme['c-font-label']}>{error}</Text> : null}
+        {/* 高度已由 Dialog 固定，此处 flex:1 才能滚动 */}
+        <ScrollView style={styles.list} contentContainerStyle={styles.listContent}>
+          {items.length
+            ? items.map(renderItem)
+            : <Text size={13} color={theme['c-font-label']} style={styles.empty}>{loading ? t('loading') : t('source_library_empty')}</Text>
+          }
+        </ScrollView>
+      </View>
+    </Dialog>
   )
 })
 
 const styles = createStyle({
-  header: {
+  body: {
+    flex: 1,
+    paddingLeft: 10,
+    paddingRight: 10,
+  },
+  bar: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingBottom: 8,
+    paddingBottom: 6,
   },
-  refresh: {
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingTop: 3,
-    paddingBottom: 3,
+  smallBtn: {
+    paddingLeft: 8,
+    paddingRight: 8,
+    paddingTop: 4,
+    paddingBottom: 4,
     borderRadius: 4,
     backgroundColor: 'rgba(128,128,128,0.18)',
   },
-  notice: {
-    paddingBottom: 6,
+  list: {
+    flex: 1,
+  },
+  listContent: {
+    paddingBottom: 20,
   },
   empty: {
-    paddingTop: 20,
-    paddingBottom: 20,
+    paddingTop: 30,
     textAlign: 'center',
   },
   item: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingTop: 8,
-    paddingBottom: 8,
+    paddingTop: 7,
+    paddingBottom: 7,
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: 'rgba(128,128,128,0.25)',
   },
@@ -202,9 +194,6 @@ const styles = createStyle({
     flexGrow: 1,
     flexShrink: 1,
     paddingRight: 10,
-  },
-  desc: {
-    marginTop: 2,
   },
   btn: {
     minWidth: 62,
