@@ -6,7 +6,7 @@
   <a href="https://github.com/Phoenix-Lk0/lx-music-mobile/releases"><img src="https://img.shields.io/github/release/Phoenix-Lk0/lx-music-mobile" alt="Release version"></a>
   <a href="https://github.com/Phoenix-Lk0/lx-music-mobile/actions/workflows/build-lib.yml"><img src="https://github.com/Phoenix-Lk0/lx-music-mobile/workflows/Build (Lib Edition)/badge.svg" alt="Build status"></a>
   <a href="https://github.com/facebook/react-native"><img src="https://img.shields.io/github/package-json/dependency-version/lyswhut/lx-music-mobile/react-native/master" alt="React native version"></a>
-  <!-- <a href="https://github.com/lyswhut/lx-music-mobile/blob/master/LICENSE"><img src="https://img.shields.io/github/license/lyswhut/lx-music-mobile" alt="License"></a> -->
+  <!-- <a href="https://github.com/Phoenix-Lk0/lx-music-mobile/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Phoenix-Lk0/lx-music-mobile" alt="License"></a> -->
 </p>
 
 <p align="center">一个基于上游项目二次开发的音乐软件</p>
