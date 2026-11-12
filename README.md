@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/Phoenix-Lk0/lx-music-mobile/releases"><img src="https://img.shields.io/github/release/Phoenix-Lk0/lx-music-mobile" alt="Release version"></a>
-  <a href="https://github.com/lyswhut/lx-music-mobile/actions/workflows/release.yml"><img src="https://github.com/lyswhut/lx-music-mobile/workflows/Build/badge.svg" alt="Build status"></a>
+  <a href="https://github.com/Phoenix-Lk0/lx-music-mobile/actions/workflows/release.yml"><img src="https://github.com/Phoenix-Lk0/lx-music-mobile/workflows/Build/badge.svg" alt="Build status"></a>
   <a href="https://github.com/lyswhut/lx-music-mobile/actions/workflows/beta-pack.yml"><img src="https://github.com/lyswhut/lx-music-mobile/workflows/Build%20Beta/badge.svg" alt="Build status"></a>
   <a href="https://github.com/facebook/react-native"><img src="https://img.shields.io/github/package-json/dependency-version/lyswhut/lx-music-mobile/react-native/master" alt="React native version"></a>
   <!-- <a href="https://github.com/lyswhut/lx-music-mobile/releases"><img src="https://img.shields.io/github/downloads/lyswhut/lx-music-mobile/latest/total" alt="Downloads"></a> -->
